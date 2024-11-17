@@ -90,13 +90,18 @@ main {
 
 #index_main {
   padding: 1rem;
-  height: 80vh;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
+  gap: 2rem;
+}
+#index_main > #index_part_1 {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3rem;
 }
 #index_main > #index_part_1 > h1 {
-  font-size: 13vw;
+  font-size: 7.5vw;
   font-weight: 400;
   display: flex;
   flex-direction: column;
@@ -107,9 +112,66 @@ main {
   gap: 0.5rem;
 }
 #index_main > #index_part_1 > h1 ion-icon {
-  padding-bottom: 0.7rem;
-  font-size: 2.2rem;
+  --ionicon-stroke-width: 26px;
+  padding-bottom: 0.3rem;
   color: #ff3300;
+}
+#index_main > #index_part_2 {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 5rem;
+}
+#index_main > #index_part_2 > h1 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #474747;
+}
+#index_main > #index_part_2 > div {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+#index_main > #index_part_2 > div > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+#index_main > #index_part_2 > div > div > div {
+  height: 2.8rem;
+  display: flex;
+  position: relative;
+  gap: 1rem;
+}
+#index_main > #index_part_2 > div > div > div > div {
+  height: 100%;
+}
+#index_main > #index_part_2 > div > div > div > div:nth-child(1) {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+#index_main > #index_part_2 > div > div > div > div:nth-child(1) > h2 {
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  text-wrap: nowrap;
+}
+#index_main > #index_part_2 > div > div > div > div:nth-child(2) {
+  height: 100%;
+  aspect-ratio: 1/1;
+}
+#index_main > #index_part_2 > div > div > div > div:nth-child(2) > svg {
+  height: 100%;
+  width: 100%;
+}
+#index_main > #index_part_2 > div > div > div > div:nth-child(2) > svg .cls-1 {
+  fill: #ff3300;
+  stroke-width: 5px;
+  stroke: #ff3300;
+}
+#index_main > #index_part_2 > div > div > p {
+  color: #cfcfcf;
+  font-size: 0.8rem;
 }
 
 nav {
@@ -143,6 +205,20 @@ nav > #nav_left > #nav_name {
   font-size: 1.4rem;
   font-weight: 400;
   color: #fff;
+}
+nav > #nav_right {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+nav > #nav_right > #lang_button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+nav > #nav_right > #lang_button > span:nth-child(1) {
+  color: #ff3300;
 }
 nav > #nav_right > button {
   width: 3rem;
