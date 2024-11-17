@@ -1,11 +1,6 @@
 
 
 
-
-
-let tr = true;
-
-
 function changeLanguage() {
 
     var TrElements = document.querySelectorAll('[data-tr]');
@@ -27,6 +22,7 @@ function changeLanguage() {
     }
 
 }
+let tr = true;
 
 var TrElements = document.querySelectorAll('[data-tr]');
 for (var i = 0; i < TrElements.length; i++) {
@@ -35,3 +31,20 @@ for (var i = 0; i < TrElements.length; i++) {
 
 document.getElementById("lang_button").addEventListener("click",changeLanguage);
 
+
+
+const swiper = new Swiper('.swiper', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+    speed: 1000,
+    spaceBetween: 15,
+    slidesPerView: 1.1,
+  
+    autoplay: {
+      delay: 3000,
+    },
+  
+  
+
+  });
