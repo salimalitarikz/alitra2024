@@ -41,7 +41,7 @@ html {
 }
 
 body {
-  height: 150vh;
+  height: 250vh;
   width: 100%;
   background-color: #030303;
   padding-top: 5rem;
@@ -56,7 +56,7 @@ body {
   }
 }
 #godrays {
-  position: absolute;
+  position: fixed;
   top: 0;
   width: 100vw;
   height: 100vh;
@@ -66,8 +66,8 @@ body {
   background-size: 300%, 200%;
   background-position: 50% 50%, 50% 50%;
   filter: invert(100%);
-  -webkit-mask-image: radial-gradient(ellipse at 100% 0%, rgba(0, 0, 0, 0.39) 30%, transparent 70%);
-          mask-image: radial-gradient(ellipse at 100% 0%, rgba(0, 0, 0, 0.39) 30%, transparent 70%);
+  -webkit-mask-image: radial-gradient(ellipse at 100% 0%, rgba(0, 0, 0, 0.219) 30%, transparent 70%);
+          mask-image: radial-gradient(ellipse at 100% 0%, rgba(0, 0, 0, 0.219) 30%, transparent 70%);
   pointer-events: none;
   opacity: 0.3;
   z-index: -1;
@@ -96,7 +96,20 @@ main {
   justify-content: flex-end;
 }
 #index_main > #index_part_1 > h1 {
-  font-size: 1.7rem;
+  font-size: 13vw;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+}
+#index_main > #index_part_1 > h1 > span {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.5rem;
+}
+#index_main > #index_part_1 > h1 ion-icon {
+  padding-bottom: 0.7rem;
+  font-size: 2.2rem;
+  color: #ff3300;
 }
 
 nav {
