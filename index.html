@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alitra Studio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="godrays"></div>
+
+
+
+    <nav>
+        <div id="nav_left">
+            <div id="nav_logo">
+                <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 83.09 83.09">
+                    <g id="Layer_1-2" data-name="Layer 1">
+                      <path class="cls-1" d="M40.02,1.13L1.13,40.02c-.84.84-.84,2.21,0,3.05l38.89,38.89c.84.84,2.21.84,3.05,0l38.89-38.89c.84-.84.84-2.21,0-3.05L43.07,1.13c-.84-.84-2.21-.84-3.05,0ZM23.24,41.4H2.22c-.77,0-1.15-.93-.61-1.47L39.93,1.62c.54-.54,1.47-.16,1.47.61v21.02c0,10.03-8.13,18.16-18.16,18.16ZM41.4,59.85v21.02c0,.77-.93,1.15-1.47.61L1.62,43.16c-.54-.54-.16-1.47.61-1.47h21.02c10.03,0,18.16,8.13,18.16,18.16ZM59.85,41.68h21.02c.77,0,1.15.93.61,1.47l-38.32,38.32c-.54.54-1.47.16-1.47-.61v-21.02c0-10.03,8.13-18.16,18.16-18.16ZM41.68,23.24V2.22c0-.77.93-1.15,1.47-.61l38.32,38.32c.54.54.16,1.47-.61,1.47h-21.02c-10.03,0-18.16-8.13-18.16-18.16Z"/>
+                    </g>
+                  </svg>
+            </div>
+
+            <div id="nav_name">
+              <span>ALITRA</span>
+            </div>
+        </div>
+
+        <div id="nav_right">
+
+        </div>
+    </nav>
+
+    <menu></menu>
+
+
+    <div id="test">
+
+    </div>
+
+    
+    <main></main>
+
+
+
+
+    <footer></footer>
+
+</body>
+</html>
+
+
+
+
+
+<svg>
+    <filter id='noiseFilter'>
+      <feTurbulence 
+        type='turbulence' 
+        baseFrequency='0.5' 
+        stitchTiles='stitch'/>
+       <feColorMatrix in="colorNoise" type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0" />
+          <feComposite operator="in" in2="SourceGraphic" result="monoNoise"/>
+          <feBlend in="SourceGraphic" in2="monoNoise" mode="screen" />
+    </filter>
+    
+  </svg>
+  
