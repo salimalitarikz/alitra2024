@@ -7,7 +7,7 @@ $light2:#a5a5a5;
 
 $dark:#030303;
 
-$accent:#ff3300;
+$accent:#ff4000;
 $accent_op:#ff330090;
 $text_gray:#474747;
 
@@ -352,7 +352,8 @@ main{
                 >ion-icon{
                     margin-right: 2rem;
                     z-index: 1;
-                    filter:drop-shadow(0 0 20px $accent)drop-shadow(0 0 50px $accent);
+                    filter:drop-shadow(0 0 20px $accent)
+                    drop-shadow(0 0 50px $accent);
                         
                 }
             }

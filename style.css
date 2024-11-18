@@ -186,7 +186,7 @@ nav > #nav_right > #lang_button {
   text-align: center;
 }
 nav > #nav_right > #lang_button > span:nth-child(1) {
-  color: #ff3300;
+  color: #ff4000;
 }
 nav > #nav_right > button {
   width: 3rem;
@@ -288,7 +288,7 @@ main {
 #index_main > #index_part_1 > h1 > span:nth-child(2) > ion-icon {
   margin-right: 2rem;
   z-index: 1;
-  filter: drop-shadow(0 0 20px #ff3300) drop-shadow(0 0 50px #ff3300);
+  filter: drop-shadow(0 0 20px #ff4000) drop-shadow(0 0 50px #ff4000);
 }
 #index_main > #index_part_1 > h1 > span {
   display: flex;
@@ -298,7 +298,7 @@ main {
 #index_main > #index_part_1 > h1 ion-icon {
   --ionicon-stroke-width: 26px;
   padding-bottom: 0.3rem;
-  color: #ff3300;
+  color: #ff4000;
 }
 @media only screen and (min-width: 800px) {
   #index_main > #index_part_1 > h1 {
@@ -362,8 +362,8 @@ main {
 }
 #index_main > #index_part_2 > #index_part_2_content_wrapper > #index_part_2_content > .index_part_2_box > .index_part_2_box_header > .index_part_2_box_header_right > svg {
   height: 100%;
-  fill: #ff3300;
-  stroke: #ff3300;
+  fill: #ff4000;
+  stroke: #ff4000;
   stroke-width: 10px;
 }
 #index_main > #index_part_2 > #index_part_2_content_wrapper > #index_part_2_content > .index_part_2_box > .index_part_2_box_content {
@@ -408,7 +408,7 @@ main {
   aspect-ratio: 1/1;
 }
 #index_main > #index_part_3 > a > svg {
-  fill: #ff3300;
+  fill: #ff4000;
   filter: drop-shadow(0 0 80px rgba(255, 51, 0, 0.5647058824)) drop-shadow(0 0 20px rgba(255, 51, 0, 0.5647058824));
 }
 #index_main > #index_part_3 > a > span {
