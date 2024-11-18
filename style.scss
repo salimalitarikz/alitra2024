@@ -283,15 +283,8 @@ main{
                 >ion-icon{
                     margin-right: 2rem;
                     z-index: 1;
-                    filter:
-                        drop-shadow(0 0 20px $accent)
-                        drop-shadow(0 0 20px $accent)
-                        drop-shadow(0 0 50px $accent)
-                        drop-shadow(0 0 50px $accent)
-                        drop-shadow(0 0 100px $accent)
-                        drop-shadow(0 0 100px $accent)
-                        drop-shadow(0 0 100px $accent)
-                        drop-shadow(0 0 600px $accent);
+                    filter:drop-shadow(0 0 20px $accent)drop-shadow(0 0 50px $accent);
+                        
                 }
             }
 

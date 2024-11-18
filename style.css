@@ -233,7 +233,7 @@ main {
 #index_main > #index_part_1 > h1 > span:nth-child(2) > ion-icon {
   margin-right: 2rem;
   z-index: 1;
-  filter: drop-shadow(0 0 20px #ff3300) drop-shadow(0 0 20px #ff3300) drop-shadow(0 0 50px #ff3300) drop-shadow(0 0 50px #ff3300) drop-shadow(0 0 100px #ff3300) drop-shadow(0 0 100px #ff3300) drop-shadow(0 0 100px #ff3300) drop-shadow(0 0 600px #ff3300);
+  filter: drop-shadow(0 0 20px #ff3300) drop-shadow(0 0 50px #ff3300);
 }
 #index_main > #index_part_1 > h1 > span {
   display: flex;
