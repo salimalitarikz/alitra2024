@@ -432,16 +432,16 @@ main{
             >svg{
                 fill: $accent;
                 
-                animation: part_3_svg_an 10s linear infinite;
+                animation: part_3_svg_an 5s linear infinite;
                 @keyframes part_3_svg_an {
                     0%{
-                        filter: drop-shadow(0 0 300px $accent) drop-shadow(0 0 120px $accent);
+                        filter: drop-shadow(0 0 200px $accent) drop-shadow(0 0 100px $accent);
                     }
                     50%{
-                        filter: drop-shadow(0 0 150px $accent) drop-shadow(0 0 90px $accent);
+                        filter: drop-shadow(0 0 200px $dark) drop-shadow(0 0 100px $dark);
                     }
                     100%{
-                        filter: drop-shadow(0 0 300px $accent) drop-shadow(0 0 120px $accent);
+                        filter: drop-shadow(0 0 200px $accent) drop-shadow(0 0 100px $accent);
                     }
                 }
                 
