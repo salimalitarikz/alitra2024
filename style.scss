@@ -11,6 +11,8 @@ $accent:#ff3300;
 $accent_op:#ff330090;
 $text_gray:#474747;
 
+$media_1:800px;
+
 
 
 *{
@@ -116,9 +118,74 @@ body{
 }
 
 
+#updating_bar{
+    position: fixed;
+    width: 100vw;
+    height: 2rem;
+    top: 0;
+    background-color: $light;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    *{
+        color: $dark;
+    }
+    
+/* Çizgi Çerçevesi */
+.marquee {
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+    // border: 1px solid #000; /* Çizgi rengi */
+    width: 101vw;
+    margin-left: -.6rem;
+    height: 50px; /* Çizgi yüksekliği */
+    display: flex;
+}
+
+/* Kayan İçerik */
+.marquee-content {
+    display: flex;
+    align-items: center;
+    animation: marquee 15s linear infinite;
+}
+
+/* İki Kopyayı Yan Yana Getirme */
+.marquee-content >span{
+    margin-right: 1rem;
+}
+
+.marquee-content span {
+    // padding-right: 50px; /* İki kopya arasındaki mesafe */
+    display: inline-block;
+    font-size: 1.1rem;
+   
+
+
+    >span{
+        padding: 0 .5rem;
+        font-style: italic;
+        font-weight: 700;
+    }
+}
+
+/* Animasyon */
+@keyframes marquee {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+}
+
+
+
 nav{
     position: fixed;
-    top: 0;
+    top: 2rem;
     height: 4rem;
     width: 100%;
     padding: 1rem ;
@@ -274,11 +341,13 @@ main{
             font-weight: 400;
             display: flex;
             flex-direction: column;
+            align-items: center;
             line-height: 110%;
 
             >span:nth-child(2){
-                align-self: flex-end;
+                // align-self: flex-end;
                 padding-right: 1rem;
+                transform: translateX(10vw);
 
                 >ion-icon{
                     margin-right: 2rem;
@@ -306,6 +375,14 @@ main{
             }
 
         }
+
+        @media only screen and (min-width: $media_1) {
+            >h1{
+                font-size: 6vw;
+                font-weight: 500
+            }
+        }
+        
     }
 
     >#index_part_2{

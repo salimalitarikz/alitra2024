@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("fonts/helvetica/stylesheet.css");
 * {
   padding: 0;
@@ -86,9 +87,62 @@ body {
   mix-blend-mode: difference;
 }
 
+#updating_bar {
+  position: fixed;
+  width: 100vw;
+  height: 2rem;
+  top: 0;
+  background-color: #e4e4e4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  /* Çizgi Çerçevesi */
+  /* Kayan İçerik */
+  /* İki Kopyayı Yan Yana Getirme */
+  /* Animasyon */
+}
+#updating_bar * {
+  color: #030303;
+}
+#updating_bar .marquee {
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+  width: 101vw;
+  margin-left: -0.6rem;
+  height: 50px; /* Çizgi yüksekliği */
+  display: flex;
+}
+#updating_bar .marquee-content {
+  display: flex;
+  align-items: center;
+  animation: marquee 15s linear infinite;
+}
+#updating_bar .marquee-content > span {
+  margin-right: 1rem;
+}
+#updating_bar .marquee-content span {
+  display: inline-block;
+  font-size: 1.1rem;
+}
+#updating_bar .marquee-content span > span {
+  padding: 0 0.5rem;
+  font-style: italic;
+  font-weight: 700;
+}
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
 nav {
   position: fixed;
-  top: 0;
+  top: 2rem;
   height: 4rem;
   width: 100%;
   padding: 1rem;
@@ -224,11 +278,12 @@ main {
   font-weight: 400;
   display: flex;
   flex-direction: column;
+  align-items: center;
   line-height: 110%;
 }
 #index_main > #index_part_1 > h1 > span:nth-child(2) {
-  align-self: flex-end;
   padding-right: 1rem;
+  transform: translateX(10vw);
 }
 #index_main > #index_part_1 > h1 > span:nth-child(2) > ion-icon {
   margin-right: 2rem;
@@ -244,6 +299,12 @@ main {
   --ionicon-stroke-width: 26px;
   padding-bottom: 0.3rem;
   color: #ff3300;
+}
+@media only screen and (min-width: 800px) {
+  #index_main > #index_part_1 > h1 {
+    font-size: 6vw;
+    font-weight: 500;
+  }
 }
 #index_main > #index_part_2 {
   display: flex;
