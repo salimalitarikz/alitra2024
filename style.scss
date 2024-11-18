@@ -269,10 +269,31 @@ main{
         flex-direction: column;
         margin-top: 3rem;
         >h1{
-            font-size: 7.5vw;
+            // font-size: 7.5vw;
+            font-size: 15vw;
             font-weight: 400;
             display: flex;
             flex-direction: column;
+            line-height: 110%;
+
+            >span:nth-child(2){
+                align-self: flex-end;
+                padding-right: 1rem;
+
+                >ion-icon{
+                    margin-right: 2rem;
+                    z-index: 1;
+                    filter:
+                        drop-shadow(0 0 20px $accent)
+                        drop-shadow(0 0 20px $accent)
+                        drop-shadow(0 0 50px $accent)
+                        drop-shadow(0 0 50px $accent)
+                        drop-shadow(0 0 100px $accent)
+                        drop-shadow(0 0 100px $accent)
+                        drop-shadow(0 0 100px $accent)
+                        drop-shadow(0 0 600px $accent);
+                }
+            }
 
             >span{
                 display: flex;
@@ -329,7 +350,7 @@ main{
                     background: $dark;
                     -webkit-backdrop-filter: blur(10px);
                     backdrop-filter: blur(5px);
-                    border: 1px solid rgba(255, 255, 255, 0.11);
+                    // border: 1px solid rgba(255, 255, 255, 0.11);
                     display: flex;
                     flex-direction: column;
                     gap: 1rem;
