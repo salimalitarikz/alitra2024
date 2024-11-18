@@ -2,12 +2,14 @@
 
 @import url("fonts/helvetica/stylesheet.css");
 
-$light:#ececec;
-$light2:#cfcfcf;
+$light:#e4e4e4;
+$light2:#a5a5a5;
+
 $dark:#030303;
 
 $accent:#ff3300;
 $text_gray:#474747;
+
 
 
 *{
@@ -81,6 +83,7 @@ body{
 
 #godrays {
     position: fixed;
+    
     top: 0;
     width: 100vw;
     height: 100vh;
@@ -91,7 +94,7 @@ body{
     background-image: var(--stripes), var(--rainbow);
     background-size: 300%, 200%;
     background-position: 50% 50%, 50% 50%;
-    filter: invert(100%);
+    filter: invert(100%) blur(1px);
     mask-image: radial-gradient(ellipse at 100% 0%, rgba(0, 0, 0, 0.219) 30%, transparent 70%);
     pointer-events: none;
     opacity: .3;
@@ -245,42 +248,36 @@ main{
 
         >#index_part_2_content_wrapper{
            height: 100%;
-        //    width: 100vw;
-        padding-left: 15px;
+
 
             >#index_part_2_content{
                 display: flex;
-                // gap: 2rem;
-                width: 100vw;
+                flex-direction: column;
+                gap: 2rem;
+                width: 100%;
                 position: relative;
-                left: -1rem;
+                // left: -1rem;
                 
                 
 
                 >.index_part_2_box{
-                    min-width: 80vw !important;
+                    min-width: 20vw !important;
+                    padding: 1.2rem 1rem;
+                    border-radius: 4px;
+                    background: transparent;
+                    -webkit-backdrop-filter: blur(10px);
+                    backdrop-filter: blur(5px);
+                    border: 1px solid rgba(255, 255, 255, 0.11);
                     display: flex;
                     flex-direction: column;
-                    // height: max-content;
                     gap: 1rem;
-                    padding: 1rem;
-                    
-                    border-radius: 4px;
-                    background: $light;
-                    -webkit-backdrop-filter: blur(10px);
-                    backdrop-filter: blur(10px);
-                    border: 1px solid rgba(255,255,255,0.25);
-
-                    
-                    *{
-                        color: $dark;
-                    }
-
+    
 
                     >.index_part_2_box_header{
+                        height: fit-content;
                         display: flex;
                         gap: 1rem;
-                        height: fit-content;
+                        
 
                         >.index_part_2_box_header_left{
                             display: flex;
@@ -313,8 +310,12 @@ main{
                     }
 
                     >.index_part_2_box_content{
+                        >p{
+                            color: $light2;
+                        }
                         font-size: .9rem;
                         line-height: 120%;
+                        
                     }
                 }
             }

@@ -33,18 +33,26 @@ document.getElementById("lang_button").addEventListener("click",changeLanguage);
 
 
 
-const swiper = new Swiper('.swiper', {
-    // Optional parameters
-    direction: 'horizontal',
-    loop: true,
-    speed: 1000,
-    spaceBetween: 15,
-    slidesPerView: 1.1,
+
+
+
+
+
+
+// Slider Things
+
+// const swiper = new Swiper('.swiper', {
+//     // Optional parameters
+//     direction: 'horizontal',
+//     loop: true,
+//     speed: 1000,
+//     spaceBetween: 15,
+//     slidesPerView: 1.1,
   
-    autoplay: {
-      delay: 3000,
-    },
+//     autoplay: {
+//       delay: 3000,
+//     },
   
   
 
-  });
+//   });

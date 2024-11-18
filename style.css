@@ -4,7 +4,7 @@
   margin: 0;
   box-sizing: border-box;
   position: relative;
-  color: #ececec;
+  color: #e4e4e4;
   font-family: "Helvetica Now Display", sans-serif;
 }
 
@@ -65,7 +65,7 @@ body {
   background-image: var(--stripes), var(--rainbow);
   background-size: 300%, 200%;
   background-position: 50% 50%, 50% 50%;
-  filter: invert(100%);
+  filter: invert(100%) blur(1px);
   -webkit-mask-image: radial-gradient(ellipse at 100% 0%, rgba(0, 0, 0, 0.219) 30%, transparent 70%);
           mask-image: radial-gradient(ellipse at 100% 0%, rgba(0, 0, 0, 0.219) 30%, transparent 70%);
   pointer-events: none;
@@ -139,8 +139,8 @@ nav > #nav_right > button {
   justify-content: center;
 }
 nav > #nav_right > button rect {
-  fill: #ececec;
-  stroke: #ececec;
+  fill: #e4e4e4;
+  stroke: #e4e4e4;
   stroke-width: 1px;
 }
 
@@ -190,34 +190,31 @@ main {
 }
 #index_main > #index_part_2 > #index_part_2_content_wrapper {
   height: 100%;
-  padding-left: 15px;
 }
 #index_main > #index_part_2 > #index_part_2_content_wrapper > #index_part_2_content {
   display: flex;
-  width: 100vw;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
   position: relative;
-  left: -1rem;
 }
 #index_main > #index_part_2 > #index_part_2_content_wrapper > #index_part_2_content > .index_part_2_box {
-  min-width: 80vw !important;
+  min-width: 20vw !important;
+  padding: 1.2rem 1rem;
+  border-radius: 4px;
+  background: transparent;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.11);
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  padding: 1rem;
-  border-radius: 4px;
-  background: #ececec;
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-}
-#index_main > #index_part_2 > #index_part_2_content_wrapper > #index_part_2_content > .index_part_2_box * {
-  color: #030303;
 }
 #index_main > #index_part_2 > #index_part_2_content_wrapper > #index_part_2_content > .index_part_2_box > .index_part_2_box_header {
-  display: flex;
-  gap: 1rem;
   height: -moz-fit-content;
   height: fit-content;
+  display: flex;
+  gap: 1rem;
 }
 #index_main > #index_part_2 > #index_part_2_content_wrapper > #index_part_2_content > .index_part_2_box > .index_part_2_box_header > .index_part_2_box_header_left {
   display: flex;
@@ -243,4 +240,7 @@ main {
 #index_main > #index_part_2 > #index_part_2_content_wrapper > #index_part_2_content > .index_part_2_box > .index_part_2_box_content {
   font-size: 0.9rem;
   line-height: 120%;
+}
+#index_main > #index_part_2 > #index_part_2_content_wrapper > #index_part_2_content > .index_part_2_box > .index_part_2_box_content > p {
+  color: #a5a5a5;
 }/*# sourceMappingURL=style.css.map */
