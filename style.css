@@ -338,7 +338,7 @@ main {
   aspect-ratio: 1/1;
 }
 #index_main > #index_part_3 > a > svg {
-  fill: rgba(255, 51, 0, 0.5647058824);
+  fill: #ff3300;
   filter: drop-shadow(0 0 80px rgba(255, 51, 0, 0.5647058824)) drop-shadow(0 0 20px rgba(255, 51, 0, 0.5647058824));
 }
 #index_main > #index_part_3 > a > span {
