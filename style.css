@@ -56,7 +56,7 @@ body {
   }
 }
 #godrays {
-  position: fixed;
+  position: absolute;
   top: 0;
   width: 100vw;
   height: 100vh;
@@ -65,7 +65,7 @@ body {
   background-image: var(--stripes), var(--rainbow);
   background-size: 300%, 200%;
   background-position: 50% 50%, 50% 50%;
-  filter: invert(100%) blur(1px);
+  filter: invert(100%);
   -webkit-mask-image: radial-gradient(ellipse at 100% 0%, rgba(0, 0, 0, 0.219) 30%, transparent 70%);
           mask-image: radial-gradient(ellipse at 100% 0%, rgba(0, 0, 0, 0.219) 30%, transparent 70%);
   pointer-events: none;
@@ -243,4 +243,26 @@ main {
 }
 #index_main > #index_part_2 > #index_part_2_content_wrapper > #index_part_2_content > .index_part_2_box > .index_part_2_box_content > p {
   color: #a5a5a5;
+}
+#index_main > #index_part_3 {
+  margin-top: 5vh;
+}
+#index_main > #index_part_3 > #index_part_3_header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+#index_main > #index_part_3 > #index_part_3_header > h1 {
+  width: 100%;
+  font-size: 23.8vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #a5a5a5;
+}
+#index_main > #index_part_3 > #index_part_3_header > p {
+  width: 100%;
+  text-align: center;
+  font-size: 1.5rem;
 }/*# sourceMappingURL=style.css.map */
