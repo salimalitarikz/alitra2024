@@ -35,6 +35,12 @@ document.getElementById("lang_button").addEventListener("click",changeLanguage);
 
 
 
+function toggleMenu() {
+    document.querySelector("menu").classList.toggle("opened_menu");
+}
+
+document.getElementById("menu_button").addEventListener("click",toggleMenu);
+
 
 
 
