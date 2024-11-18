@@ -19,6 +19,7 @@ $text_gray:#474747;
     position: relative;
     color: $light;
     font-family: 'Helvetica Now Display', sans-serif;
+    -webkit-tap-highlight-color: #ff330010;
 }
 
 
@@ -177,6 +178,7 @@ nav{
             display: flex;
             align-items: center;
             justify-content: center;
+            cursor: pointer;
 
             rect{
                 fill: $light;
@@ -189,15 +191,20 @@ nav{
 
 menu{
     width: calc(100%);
-    height: 100vh;
+    height: 0;
     position: fixed;
     bottom: 0;
-    z-index: 9;
+    z-index: 2;
+    transition-delay: 2s !important;
+    transition: .1s;
     >#menu_bg{
+       
         height: 100%;
         display: flex;
-        z-index: 1;
+        // z-index: 1;
+        
         >div{
+            
             width: 20%;
            height: 0;
             background-color: $dark;
@@ -208,10 +215,29 @@ menu{
             &:nth-child(3){transition-delay: .3s;}
             &:nth-child(4){transition-delay: .4s;}
             &:nth-child(5){transition-delay: .5s;}
+
+            overflow: hidden;
+            &::before {
+                position: absolute;
+                left: 0;
+                top: 0;
+                content: '';
+                width: 100%;
+                height: 100%;
+                // z-index: -1;
+              
+                opacity: 3%;
+                
+                background: #000000;
+                filter: url(#noiseFilter) ;
+              }
         }
     }
 
     &.opened_menu{
+        transition-delay: .1s !important;
+        height: 100vh;
+        
         >#menu_bg{
 
             >div{
@@ -299,13 +325,15 @@ main{
                     min-width: 20vw !important;
                     padding: 1.2rem 1rem;
                     border-radius: 4px;
-                    background: transparent;
+                    background: $dark;
                     -webkit-backdrop-filter: blur(10px);
                     backdrop-filter: blur(5px);
                     border: 1px solid rgba(255, 255, 255, 0.11);
                     display: flex;
                     flex-direction: column;
                     gap: 1rem;
+
+                    @extend .noised;
     
 
                     >.index_part_2_box_header{
@@ -372,6 +400,7 @@ main{
             >h1{
                 width: 100%;
                 font-size: 24vw;
+                font-weight: 700;
                 // text-align: center;
                 display: flex;
                 align-items: center;
@@ -384,8 +413,35 @@ main{
                 text-align: center;
                 font-size: 1.2rem;
             }
+
+            
+        }
+
+        >a{
+            margin-top: 5vh;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60vw !important;
+            aspect-ratio: 1/1;
             
             
+            >svg{
+                fill: $accent;
+                filter: drop-shadow(0 0 100px $accent) drop-shadow(0 0 30px $accent);
+                
+            }
+
+            >span{
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translateX(-50%) translateY(-50%);
+
+            }
         }
 
     }
