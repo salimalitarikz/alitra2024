@@ -425,18 +425,24 @@ main{
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 60vw !important;
+            width: 72vw !important;
             aspect-ratio: 1/1;
             
             
             >svg{
                 fill: $accent;
-                filter: drop-shadow(0 0 100px $accent) drop-shadow(0 0 30px $accent);
+                filter: drop-shadow(0 0 150px $accent) drop-shadow(0 0 60px $accent);
+                animation: part_3_svg_an linear;
+                animation-timeline: scroll(root);
+                @keyframes part_3_svg_an {
+                    to{transform: rotate(300deg);}
+                }
                 
             }
 
             >span{
                 position: absolute;
+                font-weight: 600;
                 left: 50%;
                 top: 50%;
                 transform: translateX(-50%) translateY(-50%);
