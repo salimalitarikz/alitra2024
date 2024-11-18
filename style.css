@@ -338,19 +338,8 @@ main {
   aspect-ratio: 1/1;
 }
 #index_main > #index_part_3 > a > svg {
-  fill: #ff3300;
-  animation: part_3_svg_an 5s linear infinite;
-}
-@keyframes part_3_svg_an {
-  0% {
-    filter: drop-shadow(0 0 200px #ff3300) drop-shadow(0 0 100px #ff3300);
-  }
-  50% {
-    filter: drop-shadow(0 0 200px #030303) drop-shadow(0 0 100px #030303);
-  }
-  100% {
-    filter: drop-shadow(0 0 200px #ff3300) drop-shadow(0 0 100px #ff3300);
-  }
+  fill: rgba(255, 51, 0, 0.5647058824);
+  filter: drop-shadow(0 0 80px rgba(255, 51, 0, 0.5647058824)) drop-shadow(0 0 20px rgba(255, 51, 0, 0.5647058824));
 }
 #index_main > #index_part_3 > a > span {
   position: absolute;

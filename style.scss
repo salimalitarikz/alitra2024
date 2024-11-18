@@ -8,6 +8,7 @@ $light2:#a5a5a5;
 $dark:#030303;
 
 $accent:#ff3300;
+$accent_op:#ff330090;
 $text_gray:#474747;
 
 
@@ -427,24 +428,13 @@ main{
             justify-content: center;
             width: 72vw !important;
             aspect-ratio: 1/1;
-            
+           
             
             >svg{
-                fill: $accent;
+                fill: $accent_op;
                 
-                animation: part_3_svg_an 5s linear infinite;
-                @keyframes part_3_svg_an {
-                    0%{
-                        filter: drop-shadow(0 0 200px $accent) drop-shadow(0 0 100px $accent);
-                    }
-                    50%{
-                        filter: drop-shadow(0 0 200px $dark) drop-shadow(0 0 100px $dark);
-                    }
-                    100%{
-                        filter: drop-shadow(0 0 200px $accent) drop-shadow(0 0 100px $accent);
-                    }
-                }
-                
+                filter: drop-shadow(0 0 80px $accent_op) drop-shadow(0 0 20px $accent_op);
+               
             }
 
             >span{
