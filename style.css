@@ -339,13 +339,17 @@ main {
 }
 #index_main > #index_part_3 > a > svg {
   fill: #ff3300;
-  filter: drop-shadow(0 0 150px #ff3300) drop-shadow(0 0 60px #ff3300);
-  animation: part_3_svg_an linear;
-  animation-timeline: scroll(root);
+  animation: part_3_svg_an 10s linear infinite;
 }
 @keyframes part_3_svg_an {
-  to {
-    transform: rotate(300deg);
+  0% {
+    filter: drop-shadow(0 0 300px #ff3300) drop-shadow(0 0 120px #ff3300);
+  }
+  50% {
+    filter: drop-shadow(0 0 150px #ff3300) drop-shadow(0 0 90px #ff3300);
+  }
+  100% {
+    filter: drop-shadow(0 0 300px #ff3300) drop-shadow(0 0 120px #ff3300);
   }
 }
 #index_main > #index_part_3 > a > span {

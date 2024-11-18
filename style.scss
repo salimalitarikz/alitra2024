@@ -431,11 +431,18 @@ main{
             
             >svg{
                 fill: $accent;
-                filter: drop-shadow(0 0 150px $accent) drop-shadow(0 0 60px $accent);
-                animation: part_3_svg_an linear;
-                animation-timeline: scroll(root);
+                
+                animation: part_3_svg_an 10s linear infinite;
                 @keyframes part_3_svg_an {
-                    to{transform: rotate(300deg);}
+                    0%{
+                        filter: drop-shadow(0 0 300px $accent) drop-shadow(0 0 120px $accent);
+                    }
+                    50%{
+                        filter: drop-shadow(0 0 150px $accent) drop-shadow(0 0 90px $accent);
+                    }
+                    100%{
+                        filter: drop-shadow(0 0 300px $accent) drop-shadow(0 0 120px $accent);
+                    }
                 }
                 
             }
