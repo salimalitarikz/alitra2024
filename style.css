@@ -5,9 +5,9 @@
   margin: 0;
   box-sizing: border-box;
   position: relative;
-  color: #e4e4e4;
+  color: #000000;
   font-family: "Helvetica Now Display", sans-serif;
-  -webkit-tap-highlight-color: rgba(255, 51, 0, 0.062745098);
+  -webkit-tap-highcolor_1-color: rgba(255, 51, 0, 0.062745098);
 }
 
 button {
@@ -45,7 +45,7 @@ html {
 body {
   height: 250vh;
   width: 100%;
-  background-color: #030303;
+  background-color: #ffffff;
   padding-top: 5rem;
 }
 
@@ -92,7 +92,7 @@ body {
   width: 100vw;
   height: 2rem;
   top: 0;
-  background-color: #e4e4e4;
+  background-color: #000000;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -103,7 +103,7 @@ body {
   /* Animasyon */
 }
 #updating_bar * {
-  color: #030303;
+  color: #ffffff;
 }
 #updating_bar .marquee {
   overflow: hidden;
@@ -161,8 +161,8 @@ nav > #nav_left > #nav_logo {
   aspect-ratio: 1/1;
 }
 nav > #nav_left > #nav_logo > svg > g > path {
-  fill: #fff;
-  stroke: #fff;
+  fill: #000000;
+  stroke: #000000;
   stroke-width: 1.7px;
 }
 nav > #nav_left > #nav_name {
@@ -197,8 +197,8 @@ nav > #nav_right > button {
   cursor: pointer;
 }
 nav > #nav_right > button rect {
-  fill: #e4e4e4;
-  stroke: #e4e4e4;
+  fill: #000000;
+  stroke: #000000;
   stroke-width: 1px;
 }
 
@@ -218,7 +218,7 @@ menu > #menu_bg {
 menu > #menu_bg > div {
   width: 20%;
   height: 0;
-  background-color: #030303;
+  background-color: #000000;
   transition: 0.7s;
   transition-timing-function: cubic-bezier(0.72, 0, 0.18, 1);
   overflow: hidden;
@@ -272,6 +272,9 @@ main {
   display: flex;
   flex-direction: column;
   margin-top: 3rem;
+  height: 60vh;
+  gap: 7vh;
+  align-items: center;
 }
 #index_main > #index_part_1 > h1 {
   font-size: 15vw;
@@ -300,6 +303,15 @@ main {
   padding-bottom: 0.3rem;
   color: #ff4000;
 }
+#index_main > #index_part_1 > button {
+  padding: 1rem;
+  border: 1.5px solid #000000;
+  font-weight: 500;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 4px;
+  font-size: 1rem;
+}
 @media only screen and (min-width: 800px) {
   #index_main > #index_part_1 > h1 {
     font-size: 6vw;
@@ -315,7 +327,7 @@ main {
 #index_main > #index_part_2 > h1 {
   font-size: 1.2rem;
   font-weight: 500;
-  color: #474747;
+  color: #636363;
   padding: 0 0.5rem;
 }
 #index_main > #index_part_2 > #index_part_2_content_wrapper {
@@ -330,9 +342,8 @@ main {
 }
 #index_main > #index_part_2 > #index_part_2_content_wrapper > #index_part_2_content > .index_part_2_box {
   min-width: 20vw !important;
-  padding: 1.2rem 1rem;
   border-radius: 4px;
-  background: #030303;
+  background: #ffffff;
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(5px);
   display: flex;
@@ -352,7 +363,7 @@ main {
   line-height: 110%;
 }
 #index_main > #index_part_2 > #index_part_2_content_wrapper > #index_part_2_content > .index_part_2_box > .index_part_2_box_header > .index_part_2_box_header_left > span {
-  color: #474747;
+  color: #636363;
 }
 #index_main > #index_part_2 > #index_part_2_content_wrapper > #index_part_2_content > .index_part_2_box > .index_part_2_box_header > .index_part_2_box_header_left > h2 {
   text-wrap: nowrap;
@@ -371,7 +382,7 @@ main {
   line-height: 150%;
 }
 #index_main > #index_part_2 > #index_part_2_content_wrapper > #index_part_2_content > .index_part_2_box > .index_part_2_box_content > p {
-  color: #a5a5a5;
+  color: #636363;
 }
 #index_main > #index_part_3 {
   margin-top: 3vh;
@@ -384,12 +395,13 @@ main {
 }
 #index_main > #index_part_3 > #index_part_3_header > h1 {
   width: 100%;
-  font-size: 24vw;
+  font-size: 29vw;
   font-weight: 700;
+  text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #e4e4e4;
+  color: #000000;
 }
 #index_main > #index_part_3 > #index_part_3_header > p {
   width: 100%;
@@ -409,7 +421,6 @@ main {
 }
 #index_main > #index_part_3 > a > svg {
   fill: #ff4000;
-  filter: drop-shadow(0 0 80px rgba(255, 51, 0, 0.5647058824)) drop-shadow(0 0 20px rgba(255, 51, 0, 0.5647058824));
 }
 #index_main > #index_part_3 > a > span {
   position: absolute;

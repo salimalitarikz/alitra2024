@@ -2,14 +2,14 @@
 
 @import url("fonts/helvetica/stylesheet.css");
 
-$light:#e4e4e4;
-$light2:#a5a5a5;
 
-$dark:#030303;
+$color_1:#000000;
+$color_2:#ffffff;
+$text_g1:#636363;
 
 $accent:#ff4000;
 $accent_op:#ff330090;
-$text_gray:#474747;
+
 
 $media_1:800px;
 
@@ -20,9 +20,9 @@ $media_1:800px;
     margin: 0;
     box-sizing: border-box;
     position: relative;
-    color: $light;
+    color: $color_1;
     font-family: 'Helvetica Now Display', sans-serif;
-    -webkit-tap-highlight-color: #ff330010;
+    -webkit-tap-highcolor_1-color: #ff330010;
 }
 
 
@@ -65,7 +65,7 @@ html{
 body{
     height: 250vh;
     width: 100%;
-    background-color: $dark;   
+    background-color: $color_2;   
     // overflow: hidden;
     padding-top: 5rem;
 
@@ -123,13 +123,13 @@ body{
     width: 100vw;
     height: 2rem;
     top: 0;
-    background-color: $light;
+    background-color: $color_1;
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 100;
     *{
-        color: $dark;
+        color: $color_2;
     }
     
 /* Çizgi Çerçevesi */
@@ -204,8 +204,8 @@ nav{
             >svg{
                 >g{
                     >path{
-                        fill: #fff;
-                        stroke: #fff;
+                        fill: $color_1;
+                        stroke: $color_1;
                         stroke-width: 1.7px;
                     }
                 }
@@ -249,8 +249,8 @@ nav{
             cursor: pointer;
 
             rect{
-                fill: $light;
-                stroke: $light;
+                fill: $color_1;
+                stroke: $color_1;
                 stroke-width: 1px;
             }
         }
@@ -275,7 +275,7 @@ menu{
             
             width: 20%;
            height: 0;
-            background-color: $dark;
+            background-color: $color_1;
             transition: .7s;
             transition-timing-function: cubic-bezier(0.72, 0, 0.18, 1);
             &:nth-child(1){transition-delay: .1s;}
@@ -335,6 +335,9 @@ main{
         display: flex;
         flex-direction: column;
         margin-top: 3rem;
+        height: 60vh;
+        gap: 7vh;
+        align-items: center;
         >h1{
             // font-size: 7.5vw;
             font-size: 15vw;
@@ -377,6 +380,15 @@ main{
 
         }
 
+        >button{
+            padding: 1rem;
+            border: 1.5px solid $color_1;
+            font-weight: 500;
+            width: fit-content;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
         @media only screen and (min-width: $media_1) {
             >h1{
                 font-size: 6vw;
@@ -396,7 +408,7 @@ main{
         >h1{
             font-size: 1.2rem;
             font-weight: 500;
-            color: $text_gray;
+            color: $text_g1;
             padding: 0 .5rem;
         }
 
@@ -416,9 +428,9 @@ main{
 
                 >.index_part_2_box{
                     min-width: 20vw !important;
-                    padding: 1.2rem 1rem;
+                    // padding: 1.2rem 1rem;
                     border-radius: 4px;
-                    background: $dark;
+                    background: $color_2;
                     -webkit-backdrop-filter: blur(10px);
                     backdrop-filter: blur(5px);
                     // border: 1px solid rgba(255, 255, 255, 0.11);
@@ -442,7 +454,7 @@ main{
                             gap: .5rem;
 
                             >span{
-                                color: $text_gray;
+                                color: $text_g1;
                             }
                             >h2{
                                 text-wrap: nowrap;
@@ -467,7 +479,7 @@ main{
 
                     >.index_part_2_box_content{
                         >p{
-                            color: $light2;
+                            color: $text_g1;
                         }
                         font-size: .9rem;
                         line-height: 150%;
@@ -492,13 +504,13 @@ main{
 
             >h1{
                 width: 100%;
-                font-size: 24vw;
+                font-size: 29vw;
                 font-weight: 700;
-                // text-align: center;
+                text-align: center;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                color: $light;
+                color: $color_1;
             }
 
             >p{
@@ -524,9 +536,7 @@ main{
             
             >svg{
                 fill: $accent;
-                
-                filter: drop-shadow(0 0 80px $accent_op) drop-shadow(0 0 20px $accent_op);
-               
+
             }
 
             >span{
@@ -563,7 +573,7 @@ main{
 //   position: relative;  
 //   width: $cirle-width;
 //   height: $cirle-width;
-//   border: 1.5px solid $light;
+//   border: 1.5px solid $color_1;
 // //   box-shadow: 2px 2px 1px $accent;
 //   border-radius: 50%;
 //   position: relative;   
