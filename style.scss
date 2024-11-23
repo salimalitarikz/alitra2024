@@ -6,6 +6,11 @@
 $color_1:#000000;
 $color_2:#ffffff;
 $text_g1:#636363;
+$text_g2:#a1a1a1;
+
+// $color_1:#ffffff;
+// $color_2:#000000;
+// $text_g1:#636363;
 
 $accent:#ff4000;
 $accent_op:#ff330090;
@@ -22,7 +27,7 @@ $media_1:800px;
     position: relative;
     color: $color_1;
     font-family: 'Helvetica Now Display', sans-serif;
-    -webkit-tap-highcolor_1-color: #ff330010;
+    -webkit-tap-highlight-color: transparent;
 }
 
 
@@ -193,6 +198,7 @@ nav{
     align-items: flex-start;
     justify-content: space-between;
     z-index: 10;
+    
     >#nav_left{
         display: flex;
         align-items: center;
@@ -252,6 +258,26 @@ nav{
                 fill: $color_1;
                 stroke: $color_1;
                 stroke-width: 1px;
+            }
+        }
+    }
+
+    *{
+        transition-delay: 1s;
+        transition: 1s;
+    }
+
+    
+    &.nav_on_black{
+        *{
+            transition-delay: .4s;
+            
+            color: $color_2;
+            
+            path, rect{
+                stroke: $color_2 !important; 
+                fill: $color_2 !important; 
+                
             }
         }
     }
@@ -382,8 +408,10 @@ main{
 
         >button{
             padding: 1rem;
-            border: 1.5px solid $color_1;
-            font-weight: 500;
+            border: 1.5px solid $text_g1;
+            // background-color: $accent;
+            // color: $color_2;
+            font-weight: 400;
             width: fit-content;
             border-radius: 4px;
             font-size: 1rem;
@@ -407,8 +435,8 @@ main{
 
         >h1{
             font-size: 1.2rem;
-            font-weight: 500;
-            color: $text_g1;
+            font-weight: 400;
+            color: $text_g2;
             padding: 0 .5rem;
         }
 

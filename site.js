@@ -37,6 +37,7 @@ document.getElementById("lang_button").addEventListener("click",changeLanguage);
 
 function toggleMenu() {
     document.querySelector("menu").classList.toggle("opened_menu");
+    document.querySelector("nav").classList.toggle("nav_on_black");
 }
 
 document.getElementById("menu_button").addEventListener("click",toggleMenu);

@@ -7,7 +7,7 @@
   position: relative;
   color: #000000;
   font-family: "Helvetica Now Display", sans-serif;
-  -webkit-tap-highcolor_1-color: rgba(255, 51, 0, 0.062745098);
+  -webkit-tap-highlight-color: transparent;
 }
 
 button {
@@ -201,6 +201,18 @@ nav > #nav_right > button rect {
   stroke: #000000;
   stroke-width: 1px;
 }
+nav * {
+  transition-delay: 1s;
+  transition: 1s;
+}
+nav.nav_on_black * {
+  transition-delay: 0.4s;
+  color: #ffffff;
+}
+nav.nav_on_black * path, nav.nav_on_black * rect {
+  stroke: #ffffff !important;
+  fill: #ffffff !important;
+}
 
 menu {
   width: 100%;
@@ -305,8 +317,8 @@ main {
 }
 #index_main > #index_part_1 > button {
   padding: 1rem;
-  border: 1.5px solid #000000;
-  font-weight: 500;
+  border: 1.5px solid #636363;
+  font-weight: 400;
   width: -moz-fit-content;
   width: fit-content;
   border-radius: 4px;
@@ -326,8 +338,8 @@ main {
 }
 #index_main > #index_part_2 > h1 {
   font-size: 1.2rem;
-  font-weight: 500;
-  color: #636363;
+  font-weight: 400;
+  color: #a1a1a1;
   padding: 0 0.5rem;
 }
 #index_main > #index_part_2 > #index_part_2_content_wrapper {
