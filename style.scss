@@ -375,8 +375,8 @@ main{
 
             >span:nth-child(2){
                 // align-self: flex-end;
-                padding-right: 1rem;
-                transform: translateX(10vw);
+                // padding-right: 1rem;
+                // transform: translateX(10vw);
 
                 >ion-icon{
                     margin-right: 2rem;
@@ -413,8 +413,10 @@ main{
             // color: $color_2;
             font-weight: 400;
             width: fit-content;
-            border-radius: 4px;
+            border-radius: 5px;
             font-size: 1rem;
+            // border-radius: 15%;
+         
         }
 
         @media only screen and (min-width: $media_1) {
@@ -447,7 +449,7 @@ main{
             >#index_part_2_content{
                 display: flex;
                 flex-direction: column;
-                gap: 2rem;
+                gap: 5rem;
                 width: 100%;
                 position: relative;
                 // left: -1rem;
@@ -455,7 +457,6 @@ main{
                 
 
                 >.index_part_2_box{
-                    min-width: 20vw !important;
                     // padding: 1.2rem 1rem;
                     border-radius: 4px;
                     background: $color_2;
@@ -467,11 +468,18 @@ main{
                     gap: 1rem;
 
                     @extend .noised;
+
+                    &:nth-child(2){
+                        svg{
+                            height: 50% !important;
+                        }
+                    }
     
 
                     >.index_part_2_box_header{
-                        height: fit-content;
+                        height: 3rem;
                         display: flex;
+                        // justify-content: space-between;
                         gap: 1rem;
                         
 
@@ -493,13 +501,17 @@ main{
                         }
 
                         >.index_part_2_box_header_right{
-                            aspect-ratio: 1/1;
-
+                            // aspect-ratio: 1/1;
+                            // display: none;
+                            margin-left: 2rem;
+                            flex-grow: 1;
+                            display: flex;
+                            align-items: flex-end;
                             >svg{
-                                height: 100%;
-                                fill: $accent;
-                                stroke: $accent;
-                                stroke-width: 10px;
+                                height: 90%;
+                                // fill: $accent;
+                                // stroke: $accent;
+                                // stroke-width: 2px;
                             }
                         }
 

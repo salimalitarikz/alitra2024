@@ -296,10 +296,6 @@ main {
   align-items: center;
   line-height: 110%;
 }
-#index_main > #index_part_1 > h1 > span:nth-child(2) {
-  padding-right: 1rem;
-  transform: translateX(10vw);
-}
 #index_main > #index_part_1 > h1 > span:nth-child(2) > ion-icon {
   margin-right: 2rem;
   z-index: 1;
@@ -321,7 +317,7 @@ main {
   font-weight: 400;
   width: -moz-fit-content;
   width: fit-content;
-  border-radius: 4px;
+  border-radius: 5px;
   font-size: 1rem;
 }
 @media only screen and (min-width: 800px) {
@@ -348,12 +344,11 @@ main {
 #index_main > #index_part_2 > #index_part_2_content_wrapper > #index_part_2_content {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 5rem;
   width: 100%;
   position: relative;
 }
 #index_main > #index_part_2 > #index_part_2_content_wrapper > #index_part_2_content > .index_part_2_box {
-  min-width: 20vw !important;
   border-radius: 4px;
   background: #ffffff;
   -webkit-backdrop-filter: blur(10px);
@@ -362,9 +357,11 @@ main {
   flex-direction: column;
   gap: 1rem;
 }
+#index_main > #index_part_2 > #index_part_2_content_wrapper > #index_part_2_content > .index_part_2_box:nth-child(2) svg {
+  height: 50% !important;
+}
 #index_main > #index_part_2 > #index_part_2_content_wrapper > #index_part_2_content > .index_part_2_box > .index_part_2_box_header {
-  height: -moz-fit-content;
-  height: fit-content;
+  height: 3rem;
   display: flex;
   gap: 1rem;
 }
@@ -381,13 +378,13 @@ main {
   text-wrap: nowrap;
 }
 #index_main > #index_part_2 > #index_part_2_content_wrapper > #index_part_2_content > .index_part_2_box > .index_part_2_box_header > .index_part_2_box_header_right {
-  aspect-ratio: 1/1;
+  margin-left: 2rem;
+  flex-grow: 1;
+  display: flex;
+  align-items: flex-end;
 }
 #index_main > #index_part_2 > #index_part_2_content_wrapper > #index_part_2_content > .index_part_2_box > .index_part_2_box_header > .index_part_2_box_header_right > svg {
-  height: 100%;
-  fill: #ff4000;
-  stroke: #ff4000;
-  stroke-width: 10px;
+  height: 90%;
 }
 #index_main > #index_part_2 > #index_part_2_content_wrapper > #index_part_2_content > .index_part_2_box > .index_part_2_box_content {
   font-size: 0.9rem;
