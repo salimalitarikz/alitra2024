@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alitra Studio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="/manifest.json">
+
 
     
 </head>
@@ -298,6 +300,15 @@
  
     <script src="site.js"></script>
  
+
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/service-worker.js').then(function(reg) {
+          console.log('Service Worker registered.', reg);
+        });
+      }
+    </script>
+    
 
 
 </body>
