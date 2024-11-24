@@ -302,7 +302,7 @@ main {
   background-color: #000000;
   color: #ffffff;
   padding: 0 1rem;
-  border-radius: 3px;
+  border-radius: 4px;
   position: relative;
 }
 #index_main > #index_part_1 > h1 > span:nth-child(1)::before {
@@ -315,14 +315,18 @@ main {
   color: #000000;
 }
 #index_main > #index_part_1 > button {
-  padding: 1rem 2rem;
-  border: 1.5px solid #636363;
+  padding: 1rem 2.65rem;
+  -webkit-backdrop-filter: invert(1);
+          backdrop-filter: invert(1);
   font-weight: 400;
   width: -moz-fit-content;
   width: fit-content;
-  border-radius: 5px;
+  border-radius: 6px;
   font-size: 1rem;
   position: relative;
+}
+#index_main > #index_part_1 > button > span {
+  color: #ffffff;
 }
 #index_main > #index_part_1 > button > span:nth-child(1) {
   position: absolute;

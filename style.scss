@@ -385,7 +385,7 @@ main{
                 background-color: $color_1;
                 color: $color_2;
                 padding: 0 1rem;
-                border-radius: 3px;
+                border-radius: 4px;
                 position: relative;
 
                 &::before{
@@ -402,16 +402,19 @@ main{
         }
 
         >button{
-            padding: 1rem 2rem;
-            border: 1.5px solid $text_g1;
-            // background-color: $accent;
-            // color: $color_2;
+            padding: 1rem 2.65rem;
+            // border: 1.5px solid $text_g1;
+            // background-color: $color_1;
+            backdrop-filter: invert(1);
             font-weight: 400;
             width: fit-content;
-            border-radius: 5px;
+            border-radius: 6px;
             font-size: 1rem;
-            // border-radius: 15%;
             position: relative;
+            >span{
+                color: $color_2;
+            }
+     
             >span:nth-child(1){
                 position: absolute;
                 left: 50%;
