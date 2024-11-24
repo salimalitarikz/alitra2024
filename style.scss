@@ -364,21 +364,10 @@ main{
         flex-direction: column;
         margin-top: 3rem;
         height: 60vh;
-        gap: 7vh;
+        gap: 10vh;
         align-items: center;
 
-        #part_1_dec{
-            width: 92vw;
-            height: 15vh;
-            position: absolute;
-            background-color: $color_1;
-            left: 50%;
-            top: -6.2%;
-            transform: translateX(-50%);
-            border-radius: 5px;
-            border-top-left-radius: 2rem;
-            border-top-right-radius: 2rem;
-        }
+    
 
 
         >h1{
@@ -389,18 +378,31 @@ main{
             flex-direction: column;
             align-items: center;
             line-height: 110%;
-           
-            >span{
-                filter: invert(1);
-                mix-blend-mode: difference;
-                
-            }
-           
+            filter: invert(1);
+            mix-blend-mode: difference;
+          
+            >span:nth-child(1){
+                background-color: $color_1;
+                color: $color_2;
+                padding: 0 1rem;
+                border-radius: 3px;
+                position: relative;
 
+                &::before{
+                    content: "TM";
+                    position: absolute;
+                    top: -2.5rem;
+                    right: .3rem;
+                    font-size: .8rem;
+                    font-weight: 900;
+                    color: $color_1;
+
+                }
+            }
         }
 
         >button{
-            padding: 1rem;
+            padding: 1rem 2rem;
             border: 1.5px solid $text_g1;
             // background-color: $accent;
             // color: $color_2;
@@ -409,6 +411,16 @@ main{
             border-radius: 5px;
             font-size: 1rem;
             // border-radius: 15%;
+            position: relative;
+            >span:nth-child(1){
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                font-size: 1rem;
+                top: -2rem;
+                text-wrap: nowrap;
+                color: $accent;
+            }
          
         }
 

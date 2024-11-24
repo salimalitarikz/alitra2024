@@ -285,20 +285,8 @@ main {
   flex-direction: column;
   margin-top: 3rem;
   height: 60vh;
-  gap: 7vh;
+  gap: 10vh;
   align-items: center;
-}
-#index_main > #index_part_1 #part_1_dec {
-  width: 92vw;
-  height: 15vh;
-  position: absolute;
-  background-color: #000000;
-  left: 50%;
-  top: -6.2%;
-  transform: translateX(-50%);
-  border-radius: 5px;
-  border-top-left-radius: 2rem;
-  border-top-right-radius: 2rem;
 }
 #index_main > #index_part_1 > h1 {
   font-size: 15vw;
@@ -307,19 +295,43 @@ main {
   flex-direction: column;
   align-items: center;
   line-height: 110%;
-}
-#index_main > #index_part_1 > h1 > span {
   filter: invert(1);
   mix-blend-mode: difference;
 }
+#index_main > #index_part_1 > h1 > span:nth-child(1) {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 0 1rem;
+  border-radius: 3px;
+  position: relative;
+}
+#index_main > #index_part_1 > h1 > span:nth-child(1)::before {
+  content: "TM";
+  position: absolute;
+  top: -2.5rem;
+  right: 0.3rem;
+  font-size: 0.8rem;
+  font-weight: 900;
+  color: #000000;
+}
 #index_main > #index_part_1 > button {
-  padding: 1rem;
+  padding: 1rem 2rem;
   border: 1.5px solid #636363;
   font-weight: 400;
   width: -moz-fit-content;
   width: fit-content;
   border-radius: 5px;
   font-size: 1rem;
+  position: relative;
+}
+#index_main > #index_part_1 > button > span:nth-child(1) {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1rem;
+  top: -2rem;
+  text-wrap: nowrap;
+  color: #ff4000;
 }
 @media only screen and (min-width: 800px) {
   #index_main > #index_part_1 > h1 {
