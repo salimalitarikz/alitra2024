@@ -454,36 +454,40 @@ main {
 }
 #index_main > #index_part_3 > #index_part_3_content > a, #index_main > #index_part_3 > #index_part_3_content > div {
   display: flex;
-  align-items: center;
-  height: 4.7rem;
-}
-#index_main > #index_part_3 > #index_part_3_content > a ion-icon, #index_main > #index_part_3 > #index_part_3_content > div ion-icon {
-  font-size: 1.5rem;
-  --ionicon-stroke-width: 24px;
-}
-#index_main > #index_part_3 > #index_part_3_content > a > span, #index_main > #index_part_3 > #index_part_3_content > div > span {
+  flex-direction: column;
+  gap: 0.9rem;
   width: 100%;
-  height: 1px;
-  background-color: #a1a1a1;
+  border-bottom: 1px solid #636363;
+  padding: 1rem 0.1rem;
+}
+#index_main > #index_part_3 > #index_part_3_content > a > span:nth-last-child(1), #index_main > #index_part_3 > #index_part_3_content > div > span:nth-last-child(1) {
   position: absolute;
   bottom: 0;
+  width: 100%;
 }
-#index_main > #index_part_3 > #index_part_3_content > a > div, #index_main > #index_part_3 > #index_part_3_content > div > div {
-  font-size: 0.8rem;
+#index_main > #index_part_3 > #index_part_3_content > a > .index_part_3_box_header, #index_main > #index_part_3 > #index_part_3_content > div > .index_part_3_box_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #cccccc;
 }
-#index_main > #index_part_3 > #index_part_3_content > a > div:nth-child(1), #index_main > #index_part_3 > #index_part_3_content > div > div:nth-child(1) {
-  width: 10%;
-  text-align: center;
+#index_main > #index_part_3 > #index_part_3_content > a > .index_part_3_box_content, #index_main > #index_part_3 > #index_part_3_content > div > .index_part_3_box_content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-#index_main > #index_part_3 > #index_part_3_content > a > div:nth-child(2), #index_main > #index_part_3 > #index_part_3_content > div > div:nth-child(2) {
-  width: 50%;
-  padding-right: 0.5rem;
+#index_main > #index_part_3 > #index_part_3_content > a > .index_part_3_box_content > p, #index_main > #index_part_3 > #index_part_3_content > div > .index_part_3_box_content > p {
+  width: 90%;
+  font-size: 0.9rem;
 }
-#index_main > #index_part_3 > #index_part_3_content > a > div:nth-child(3), #index_main > #index_part_3 > #index_part_3_content > div > div:nth-child(3) {
-  width: 30%;
-  padding-right: 0.5rem;
+#index_main > #index_part_3 > #index_part_3_content > a > .index_part_3_box_content > span, #index_main > #index_part_3 > #index_part_3_content > div > .index_part_3_box_content > span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 0.4rem;
 }
-#index_main > #index_part_3 > #index_part_3_content > a > div:nth-child(4), #index_main > #index_part_3 > #index_part_3_content > div > div:nth-child(4) {
-  width: 10%;
-  text-align: center;
+#index_main > #index_part_3 > #index_part_3_content > a > .index_part_3_box_content > span > ion-icon, #index_main > #index_part_3 > #index_part_3_content > div > .index_part_3_box_content > span > ion-icon {
+  color: #ff4000;
+  font-size: 1.7rem;
+  --ionicon-stroke-width: 20px;
 }/*# sourceMappingURL=style.css.map */
