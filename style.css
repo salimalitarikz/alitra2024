@@ -288,28 +288,29 @@ main {
   gap: 7vh;
   align-items: center;
 }
+#index_main > #index_part_1 #part_1_dec {
+  width: 92vw;
+  height: 15vh;
+  position: absolute;
+  background-color: #000000;
+  left: 50%;
+  top: -6.2%;
+  transform: translateX(-50%);
+  border-radius: 5px;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+}
 #index_main > #index_part_1 > h1 {
   font-size: 15vw;
-  font-weight: 400;
+  font-weight: 700;
   display: flex;
   flex-direction: column;
   align-items: center;
   line-height: 110%;
 }
-#index_main > #index_part_1 > h1 > span:nth-child(2) > ion-icon {
-  margin-right: 2rem;
-  z-index: 1;
-  filter: drop-shadow(0 0 20px #ff4000) drop-shadow(0 0 50px #ff4000);
-}
 #index_main > #index_part_1 > h1 > span {
-  display: flex;
-  align-items: flex-end;
-  gap: 0.5rem;
-}
-#index_main > #index_part_1 > h1 ion-icon {
-  --ionicon-stroke-width: 26px;
-  padding-bottom: 0.3rem;
-  color: #ff4000;
+  filter: invert(1);
+  mix-blend-mode: difference;
 }
 #index_main > #index_part_1 > button {
   padding: 1rem;
@@ -400,22 +401,25 @@ main {
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 3vh;
+  gap: 1rem;
 }
 #index_main > #index_part_3 > #index_part_3_header > h1 {
   width: 100%;
   font-size: 29vw;
-  font-weight: 700;
+  font-weight: 400;
+  line-height: 100%;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #000000;
+  text-wrap: nowrap;
 }
 #index_main > #index_part_3 > #index_part_3_header > p {
   width: 100%;
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
+  font-weight: 700;
 }
 #index_main > #index_part_3 > a {
   margin-top: 5vh;

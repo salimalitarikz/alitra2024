@@ -265,6 +265,8 @@ nav{
     *{
         transition-delay: 1s;
         transition: 1s;
+
+        
     }
 
     
@@ -364,45 +366,36 @@ main{
         height: 60vh;
         gap: 7vh;
         align-items: center;
+
+        #part_1_dec{
+            width: 92vw;
+            height: 15vh;
+            position: absolute;
+            background-color: $color_1;
+            left: 50%;
+            top: -6.2%;
+            transform: translateX(-50%);
+            border-radius: 5px;
+            border-top-left-radius: 2rem;
+            border-top-right-radius: 2rem;
+        }
+
+
         >h1{
             // font-size: 7.5vw;
             font-size: 15vw;
-            font-weight: 400;
+            font-weight: 700;
             display: flex;
             flex-direction: column;
             align-items: center;
             line-height: 110%;
-
-            >span:nth-child(2){
-                // align-self: flex-end;
-                // padding-right: 1rem;
-                // transform: translateX(10vw);
-
-                >ion-icon{
-                    margin-right: 2rem;
-                    z-index: 1;
-                    filter:drop-shadow(0 0 20px $accent)
-                    drop-shadow(0 0 50px $accent);
-                        
-                }
-            }
-
+           
             >span{
-                display: flex;
-                align-items: flex-end;
-                gap: .5rem;
-
-                // &:nth-child(2){
-                //     font-style: italic;
-                //     font-weight: 300;
-                // }
+                filter: invert(1);
+                mix-blend-mode: difference;
+                
             }
-            ion-icon{
-                --ionicon-stroke-width: 26px;
-                padding-bottom: .3rem;
-                // font-size: 2.2rem;
-                color: $accent;
-            }
+           
 
         }
 
@@ -540,23 +533,26 @@ main{
             width: 100%;
             display: flex;
             flex-direction: column;
-            gap: 3vh;
+            gap: 1rem;
 
             >h1{
                 width: 100%;
                 font-size: 29vw;
-                font-weight: 700;
+                font-weight: 400;
+                line-height: 100%;
                 text-align: center;
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 color: $color_1;
+                text-wrap: nowrap;
             }
 
             >p{
                 width: 100%;
                 text-align: center;
-                font-size: 1.2rem;
+                font-size: 1.5rem;
+                font-weight: 700;
             }
 
             
