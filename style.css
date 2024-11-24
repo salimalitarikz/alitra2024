@@ -117,7 +117,7 @@ body {
 #updating_bar .marquee-content {
   display: flex;
   align-items: center;
-  animation: marquee 15s linear infinite;
+  animation: marquee 30s linear infinite;
 }
 #updating_bar .marquee-content > span {
   margin-right: 1rem;
