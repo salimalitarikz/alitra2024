@@ -658,7 +658,7 @@ footer > #footer_logo svg {
   stroke: #ffffff;
   width: 125%;
   fill: none;
-  stroke-width: 0.1px;
+  stroke-width: 0.02px;
   stroke-dashoffset: 1000;
   stroke-dasharray: 1000;
   animation: footer_logo_an 13s linear infinite;
