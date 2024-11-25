@@ -661,19 +661,19 @@ footer > #footer_logo svg {
   stroke-width: 0.1px;
   stroke-dashoffset: 1000;
   stroke-dasharray: 1000;
-  animation: footer_logo_an 20s linear infinite;
+  animation: footer_logo_an 13s linear infinite;
 }
 @keyframes footer_logo_an {
   0% {
-    stroke-dasharray: 20;
+    stroke-dasharray: 33;
     stroke-dashoffset: 0;
   }
   50% {
     stroke-dasharray: 0;
-    stroke-dashoffset: 20;
+    stroke-dashoffset: 33;
   }
   100% {
-    stroke-dasharray: 20;
+    stroke-dasharray: 33;
     stroke-dashoffset: 0;
   }
 }
