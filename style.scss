@@ -6,8 +6,8 @@
 $color_1:#000000;
 $color_2:#ffffff;
 $text_g1:#636363;
-$text_g2:#a1a1a1;
-$text_g3:#cccccc;
+$text_g2:#afafaf;
+$text_g3:#c0c0c0;
 
 // $color_1:#ffffff;
 // $color_2:#000000;
@@ -399,12 +399,15 @@ main{
                 padding: 0 1rem;
                 border-radius: 4px;
                 position: relative;
-                @extend.noised;
+                // @extend.noised;
                 &::after{opacity: 30% !important; z-index: 1;}
+                overflow: hidden;
                 >span{
-                    color: $accent;
+                    color: $color_2;
+                    // color: $accent;
                     z-index: 3;
                     @extend.noised;
+                    
                     &::after{opacity: 10% !important; z-index: 1;}
                     
                 }
@@ -415,10 +418,10 @@ main{
 
         >button{
             padding: 1rem 2.65rem;
-            // border: 1.5px solid $text_g1;
+            border: 1.5px solid $text_g2;
             // background-color: $color_1;
             background-color: $color_1;
-            @extend .noised;
+            // @extend .noised;
             &::after{opacity: 1 !important;}
             font-weight: 400;
             width: fit-content;
@@ -447,7 +450,7 @@ main{
                 bottom: -2rem;
                 >ion-icon{
                     color: $accent;
-                    filter: url(#noiseFilter);
+                    // filter: url(#noiseFilter);
                 }
             }
          

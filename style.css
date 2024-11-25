@@ -20,10 +20,10 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
 }
 
-.noised, #index_dec_1, #index_main > #index_part_2 > #index_part_2_content_wrapper > #index_part_2_content > .index_part_2_box, #index_main > #index_part_1 > button, #index_main > #index_part_1 > h1 > span:nth-child(1) > span, #index_main > #index_part_1 > h1 > span:nth-child(1), menu > #menu_bg > div, body {
+.noised, #index_dec_1, #index_main > #index_part_2 > #index_part_2_content_wrapper > #index_part_2_content > .index_part_2_box, #index_main > #index_part_1 > h1 > span:nth-child(1) > span, menu > #menu_bg > div, body {
   overflow: hidden;
 }
-.noised::after, #index_dec_1::after, #index_main > #index_part_2 > #index_part_2_content_wrapper > #index_part_2_content > .index_part_2_box::after, #index_main > #index_part_1 > button::after, #index_main > #index_part_1 > h1 > span:nth-child(1) > span::after, #index_main > #index_part_1 > h1 > span:nth-child(1)::after, menu > #menu_bg > div::after, body::after {
+.noised::after, #index_dec_1::after, #index_main > #index_part_2 > #index_part_2_content_wrapper > #index_part_2_content > .index_part_2_box::after, #index_main > #index_part_1 > h1 > span:nth-child(1) > span::after, menu > #menu_bg > div::after, body::after {
   position: absolute;
   left: 0;
   top: 0;
@@ -303,6 +303,7 @@ main {
   padding: 0 1rem;
   border-radius: 4px;
   position: relative;
+  overflow: hidden;
 }
 #index_main > #index_part_1 > h1 > span:nth-child(1)::before {
   content: "TM";
@@ -318,7 +319,7 @@ main {
   z-index: 1;
 }
 #index_main > #index_part_1 > h1 > span:nth-child(1) > span {
-  color: #ff4000;
+  color: #ffffff;
   z-index: 3;
 }
 #index_main > #index_part_1 > h1 > span:nth-child(1) > span::after {
@@ -327,6 +328,7 @@ main {
 }
 #index_main > #index_part_1 > button {
   padding: 1rem 2.65rem;
+  border: 1.5px solid #afafaf;
   background-color: #000000;
   font-weight: 400;
   width: -moz-fit-content;
@@ -359,7 +361,6 @@ main {
 }
 #index_main > #index_part_1 > button > span:nth-last-child(1) > ion-icon {
   color: #ff4000;
-  filter: url(#noiseFilter);
 }
 @media only screen and (min-width: 800px) {
   #index_main > #index_part_1 > h1 {
@@ -376,7 +377,7 @@ main {
 #index_main > #index_part_2 > h1 {
   font-size: 1.2rem;
   font-weight: 400;
-  color: #a1a1a1;
+  color: #afafaf;
   padding: 0 0.5rem;
 }
 #index_main > #index_part_2 > #index_part_2_content_wrapper {
@@ -487,7 +488,7 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #cccccc;
+  border-bottom: 1px solid #c0c0c0;
   font-size: 0.8rem;
 }
 #index_main > #index_part_3 > #index_part_3_content > .index_part_3_box > .index_part_3_box_header > span:nth-child(1) {
@@ -496,7 +497,7 @@ main {
   top: 0;
   font-size: 3.7rem;
   font-weight: 700;
-  color: #cccccc;
+  color: #c0c0c0;
 }
 #index_main > #index_part_3 > #index_part_3_content > .index_part_3_box > .index_part_3_box_content {
   display: flex;
