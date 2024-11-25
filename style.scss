@@ -839,6 +839,7 @@ footer{
         background-color: $color_1;
         width: 85%;
         aspect-ratio: 1/1;
+        border-radius: 1rem;
 
         svg{
             position: absolute;
@@ -852,9 +853,11 @@ footer{
             stroke-width: .1px;
             stroke-dashoffset: 1000;
             stroke-dasharray: 1000;
-            animation: footer_logo_an 50s ease infinite;
+            animation: footer_logo_an 20s linear infinite;
             @keyframes footer_logo_an {
-                0%{stroke-dasharray: 1000;}50%{stroke-dasharray: 0;}100%{stroke-dasharray: 1000;}
+                0%{stroke-dasharray: 20;stroke-dashoffset:0;}
+                50%{stroke-dasharray: 0;stroke-dashoffset:20;}
+                100%{stroke-dasharray: 20;stroke-dashoffset:0;}
             }
 
         }
