@@ -43,7 +43,6 @@ html {
 }
 
 body {
-  height: 250vh;
   width: 100%;
   background-color: #ffffff;
   padding-top: 5rem;
@@ -432,7 +431,7 @@ main {
 }
 #index_main > #index_part_3 > #index_part_3_header > h1 {
   width: 100%;
-  font-size: 29vw;
+  font-size: 32vw;
   font-weight: 400;
   line-height: 100%;
   text-align: center;
@@ -451,43 +450,44 @@ main {
 #index_main > #index_part_3 > #index_part_3_content {
   display: flex;
   flex-direction: column;
+  gap: 1rem;
 }
-#index_main > #index_part_3 > #index_part_3_content > a, #index_main > #index_part_3 > #index_part_3_content > div {
+#index_main > #index_part_3 > #index_part_3_content > .index_part_3_box {
   display: flex;
   flex-direction: column;
   gap: 0.9rem;
   width: 100%;
   border-bottom: 1px solid #636363;
-  padding: 1rem 0.1rem;
+  padding: 0.7rem 0.5rem;
+  position: relative;
 }
-#index_main > #index_part_3 > #index_part_3_content > a > span:nth-last-child(1), #index_main > #index_part_3 > #index_part_3_content > div > span:nth-last-child(1) {
+#index_main > #index_part_3 > #index_part_3_content > .index_part_3_box > span:nth-last-child(1) {
   position: absolute;
   bottom: 0;
   width: 100%;
 }
-#index_main > #index_part_3 > #index_part_3_content > a > .index_part_3_box_header, #index_main > #index_part_3 > #index_part_3_content > div > .index_part_3_box_header {
+#index_main > #index_part_3 > #index_part_3_content > .index_part_3_box > .index_part_3_box_header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #cccccc;
+  font-size: 0.8rem;
 }
-#index_main > #index_part_3 > #index_part_3_content > a > .index_part_3_box_content, #index_main > #index_part_3 > #index_part_3_content > div > .index_part_3_box_content {
+#index_main > #index_part_3 > #index_part_3_content > .index_part_3_box > .index_part_3_box_header > span:nth-child(1) {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 3.7rem;
+  font-weight: 700;
+  color: #cccccc;
+}
+#index_main > #index_part_3 > #index_part_3_content > .index_part_3_box > .index_part_3_box_content {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-#index_main > #index_part_3 > #index_part_3_content > a > .index_part_3_box_content > p, #index_main > #index_part_3 > #index_part_3_content > div > .index_part_3_box_content > p {
-  width: 90%;
-  font-size: 0.9rem;
-}
-#index_main > #index_part_3 > #index_part_3_content > a > .index_part_3_box_content > span, #index_main > #index_part_3 > #index_part_3_content > div > .index_part_3_box_content > span {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-right: 0.4rem;
-}
-#index_main > #index_part_3 > #index_part_3_content > a > .index_part_3_box_content > span > ion-icon, #index_main > #index_part_3 > #index_part_3_content > div > .index_part_3_box_content > span > ion-icon {
-  color: #ff4000;
-  font-size: 1.7rem;
-  --ionicon-stroke-width: 20px;
+#index_main > #index_part_3 > #index_part_3_content > .index_part_3_box > .index_part_3_box_content > p {
+  z-index: 2;
+  width: 100%;
+  font-size: 1rem;
 }/*# sourceMappingURL=style.css.map */
