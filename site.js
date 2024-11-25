@@ -1,5 +1,8 @@
 
-
+function qs(query) {
+    return document.querySelector(query);
+    
+}
 
 function changeLanguage() {
 
@@ -45,21 +48,65 @@ document.getElementById("menu_button").addEventListener("click",toggleMenu);
 
 
 
+// PROGRESS 
 
-// Slider Things
+window.addEventListener("scroll", (el) => {
 
-// const swiper = new Swiper('.swiper', {
-//     // Optional parameters
-//     direction: 'horizontal',
-//     loop: true,
-//     speed: 1000,
-//     spaceBetween: 15,
-//     slidesPerView: 1.1,
-  
-//     autoplay: {
-//       delay: 3000,
-//     },
-  
-  
+    el.preventDefault();
 
-//   });
+
+    let scrollVal = window.scrollY;
+
+    console.log("---> " + scrollVal);
+
+
+
+    if(scrollVal > 2550){
+        qs("#part_5_progress_bar").style.height = "97.5vh";
+        qs("#part_5_c_6").classList.add("active");
+        qs("#part_5_c_5").classList.add("active");
+        qs("#part_5_c_4").classList.add("active");
+        qs("#part_5_c_3").classList.add("active");
+        qs("#part_5_c_2").classList.add("active");
+        qs("#part_5_c_1").classList.add("active");
+    }else if (scrollVal > 2450) {
+        qs("#part_5_progress_bar").style.height = "82.5vh";
+        qs("#part_5_c_6").classList.remove("active");
+        qs("#part_5_c_5").classList.add("active");
+        qs("#part_5_c_4").classList.add("active");
+        qs("#part_5_c_3").classList.add("active");
+        qs("#part_5_c_2").classList.add("active");
+        qs("#part_5_c_1").classList.add("active");
+    }else if (scrollVal > 2350) {
+        qs("#part_5_progress_bar").style.height = "67.5vh";
+        qs("#part_5_c_5").classList.remove("active");
+        qs("#part_5_c_4").classList.add("active");
+        qs("#part_5_c_3").classList.add("active");
+        qs("#part_5_c_2").classList.add("active");
+        qs("#part_5_c_1").classList.add("active");
+    }else if(scrollVal > 2250){
+        qs("#part_5_progress_bar").style.height = "52.5vh";
+        qs("#part_5_c_4").classList.remove("active");
+        qs("#part_5_c_3").classList.add("active");
+        qs("#part_5_c_2").classList.add("active");
+        qs("#part_5_c_1").classList.add("active");
+    }else if(scrollVal > 2150){
+        qs("#part_5_progress_bar").style.height = "37.5vh";
+        qs("#part_5_c_3").classList.remove("active");
+        qs("#part_5_c_2").classList.add("active");
+        qs("#part_5_c_1").classList.add("active");
+    }else if(scrollVal > 2050){
+        qs("#part_5_progress_bar").style.height = "22.5vh";
+        qs("#part_5_c_2").classList.remove("active");
+        qs("#part_5_c_1").classList.add("active");
+        console.log("worked");
+    }else{
+        qs("#part_5_progress_bar").style.height = "7.5vh";
+        qs("#part_5_c_1").classList.remove("active");
+    }
+    
+
+   
+
+
+});
