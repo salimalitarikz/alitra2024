@@ -20,10 +20,10 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
 }
 
-.noised, #index_dec_1, #index_main > #index_part_2 > #index_part_2_content_wrapper > #index_part_2_content > .index_part_2_box, menu > #menu_bg > div, body {
+.noised, #index_dec_1, #index_main > #index_part_2 > #index_part_2_content_wrapper > #index_part_2_content > .index_part_2_box, #index_main > #index_part_1 > button, #index_main > #index_part_1 > h1 > span:nth-child(1) > span, #index_main > #index_part_1 > h1 > span:nth-child(1), menu > #menu_bg > div, body {
   overflow: hidden;
 }
-.noised::after, #index_dec_1::after, #index_main > #index_part_2 > #index_part_2_content_wrapper > #index_part_2_content > .index_part_2_box::after, menu > #menu_bg > div::after, body::after {
+.noised::after, #index_dec_1::after, #index_main > #index_part_2 > #index_part_2_content_wrapper > #index_part_2_content > .index_part_2_box::after, #index_main > #index_part_1 > button::after, #index_main > #index_part_1 > h1 > span:nth-child(1) > span::after, #index_main > #index_part_1 > h1 > span:nth-child(1)::after, menu > #menu_bg > div::after, body::after {
   position: absolute;
   left: 0;
   top: 0;
@@ -57,7 +57,6 @@ body {
   }
 }
 #godrays {
-  display: none;
   position: absolute;
   top: 0;
   width: 100vw;
@@ -71,8 +70,8 @@ body {
   -webkit-mask-image: radial-gradient(ellipse at 100% 0%, rgba(0, 0, 0, 0.219) 30%, transparent 70%);
           mask-image: radial-gradient(ellipse at 100% 0%, rgba(0, 0, 0, 0.219) 30%, transparent 70%);
   pointer-events: none;
-  opacity: 0.3;
-  z-index: -1;
+  opacity: 0.8;
+  z-index: 1;
 }
 
 #godrays::after {
@@ -218,7 +217,7 @@ menu {
   height: 0;
   position: fixed;
   bottom: 0;
-  z-index: 2;
+  z-index: 5;
   transition-delay: 2s !important;
   transition: 0.1s;
 }
@@ -297,12 +296,9 @@ main {
   flex-direction: column;
   align-items: center;
   line-height: 110%;
-  filter: invert(1);
-  mix-blend-mode: difference;
 }
 #index_main > #index_part_1 > h1 > span:nth-child(1) {
   background-color: #000000;
-  color: #ffffff;
   padding: 0 1rem;
   border-radius: 4px;
   position: relative;
@@ -316,16 +312,30 @@ main {
   font-weight: 900;
   color: #000000;
 }
+#index_main > #index_part_1 > h1 > span:nth-child(1)::after {
+  opacity: 30% !important;
+  z-index: 1;
+}
+#index_main > #index_part_1 > h1 > span:nth-child(1) > span {
+  color: #ff4000;
+  z-index: 3;
+}
+#index_main > #index_part_1 > h1 > span:nth-child(1) > span::after {
+  opacity: 10% !important;
+  z-index: 1;
+}
 #index_main > #index_part_1 > button {
   padding: 1rem 2.65rem;
-  -webkit-backdrop-filter: invert(1);
-          backdrop-filter: invert(1);
+  background-color: #000000;
   font-weight: 400;
   width: -moz-fit-content;
   width: fit-content;
   border-radius: 6px;
   font-size: 1rem;
   position: relative;
+}
+#index_main > #index_part_1 > button::after {
+  opacity: 1 !important;
 }
 #index_main > #index_part_1 > button > span {
   color: #ffffff;
@@ -345,7 +355,10 @@ main {
   transform: translateX(-50%);
   font-size: 1rem;
   bottom: -2rem;
+}
+#index_main > #index_part_1 > button > span:nth-last-child(1) > ion-icon {
   color: #ff4000;
+  filter: url(#noiseFilter);
 }
 @media only screen and (min-width: 800px) {
   #index_main > #index_part_1 > h1 {

@@ -91,7 +91,7 @@ body{
 }
 
 #godrays {
-    display: none;
+    // display: none;
     position: absolute;
     
     top: 0;
@@ -107,8 +107,8 @@ body{
     filter: invert(100%);
     mask-image: radial-gradient(ellipse at 100% 0%, rgba(0, 0, 0, 0.219) 30%, transparent 70%);
     pointer-events: none;
-    opacity: .3;
-    z-index: -1;
+    opacity: .8;
+    z-index: 1;
 }
 
 #godrays::after {
@@ -290,7 +290,7 @@ menu{
     height: 0;
     position: fixed;
     bottom: 0;
-    z-index: 2;
+    z-index: 5;
     transition-delay: 2s !important;
     transition: .1s;
     >#menu_bg{
@@ -380,15 +380,10 @@ main{
             flex-direction: column;
             align-items: center;
             line-height: 110%;
-            filter: invert(1);
-            mix-blend-mode: difference;
+            
           
             >span:nth-child(1){
                 background-color: $color_1;
-                color: $color_2;
-                padding: 0 1rem;
-                border-radius: 4px;
-                position: relative;
 
                 &::before{
                     content: "TM";
@@ -400,6 +395,21 @@ main{
                     color: $color_1;
 
                 }
+                
+                padding: 0 1rem;
+                border-radius: 4px;
+                position: relative;
+                @extend.noised;
+                &::after{opacity: 30% !important; z-index: 1;}
+                >span{
+                    color: $accent;
+                    z-index: 3;
+                    @extend.noised;
+                    &::after{opacity: 10% !important; z-index: 1;}
+                    
+                }
+                
+                
             }
         }
 
@@ -407,7 +417,9 @@ main{
             padding: 1rem 2.65rem;
             // border: 1.5px solid $text_g1;
             // background-color: $color_1;
-            backdrop-filter: invert(1);
+            background-color: $color_1;
+            @extend .noised;
+            &::after{opacity: 1 !important;}
             font-weight: 400;
             width: fit-content;
             border-radius: 6px;
@@ -433,7 +445,10 @@ main{
                 transform: translateX(-50%);
                 font-size: 1rem;
                 bottom: -2rem;
-                color: $accent;
+                >ion-icon{
+                    color: $accent;
+                    filter: url(#noiseFilter);
+                }
             }
          
         }
