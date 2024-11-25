@@ -73,6 +73,7 @@ body{
     background-color: $color_2;   
     // overflow: hidden;
     padding-top: 5rem;
+    padding-bottom: 70vh;
 
     @extend .noised;
  
@@ -681,7 +682,9 @@ main{
             align-items: flex-end;
             justify-content: space-between;
             >h1{
-                color: $text_g1;
+                color: $color_1;
+                font-size: 4rem;
+                font-weight: 600;
             }
 
             >div{
@@ -689,7 +692,7 @@ main{
                 >span{
                     display: inline-block;
                     position: relative;
-                    color: $text_g2;
+                    color: $text_g1;
                     animation: scroll_text_an 5s linear infinite;
                 }
             }
@@ -712,7 +715,6 @@ main{
                 left: 0;
                 transition: 1s ease;
                 border-radius: 2px;
-                box-shadow: 0 0 10px $accent;
                 padding-left: 0 !important;
 
                 >span{
@@ -729,7 +731,6 @@ main{
                     background-color: $accent;
                     z-index: 2;
                     // @extend .grained;
-                    box-shadow: 0 0 10px $accent;
                     padding-left: .5rem;
 
                 
@@ -818,46 +819,36 @@ main{
 
 
 
+footer{
+    height: 60vh;
+    width: 100%;
+    background-color: $color_1;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    clip-path: polygon(50% 0%, 100% 38%, 100% 100%, 0 100%, 0% 38%);
 
+    >#footer_logo{
+        position: absolute;
+        left: 50%;
+        top: 5%;
+        transform: translateX(-50%);
+        width: 80%;
+        aspect-ratio: 1/1;
 
+        svg{
+            stroke: $color_2;
+            fill: none;
+            stroke-width: 0.05px;
+        }
+    }
 
-// $cirle-width: 85vw;
-
-// .wrap {
-// //   background-color: #1d1d1d;
-//   color: #fff;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-// }
-
-// .loader {
-//   position: relative;  
-//   width: $cirle-width;
-//   height: $cirle-width;
-//   border: 1.5px solid $color_1;
-// //   box-shadow: 2px 2px 1px $accent;
-//   border-radius: 50%;
-//   position: relative;   
-//   animation: spin-outer 4s linear infinite;
-// //   filter: blur(2px);
-// //   box-shadow: 0 0 200px #9a9a9a93;
-//   & > & {
-//     width: 61.8047%;
-//     height: 61.8047%;
-//     position: absolute;
-//     bottom: -1px;
-//     left: 50%;
-//     transform: translatex(-50%); 
-//     animation: spin-inner 3s linear infinite;
-//   }
-// }
-
-// @keyframes spin-outer {
-//     0% { transform: rotate(0deg); }
-//   100% { transform: rotate(360deg); }
-// }
-// @keyframes spin-inner {
-//     0% { transform: translatex(-50%) rotate(0deg); }
-//   100% { transform: translatex(-50%) rotate(360deg); }
-// }
+    >#footer_name{
+        color: $color_2;
+        font-size: 28.8vw;
+        line-height: 70%;
+        font-weight: 700;
+    }
+}

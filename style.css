@@ -46,6 +46,7 @@ body {
   width: 100%;
   background-color: #ffffff;
   padding-top: 5rem;
+  padding-bottom: 70vh;
 }
 
 @keyframes godrays {
@@ -524,7 +525,9 @@ main {
   justify-content: space-between;
 }
 #index_main > #index_part_5 > div:nth-child(1) > h1 {
-  color: #636363;
+  color: #000000;
+  font-size: 4rem;
+  font-weight: 600;
 }
 #index_main > #index_part_5 > div:nth-child(1) > div {
   overflow: hidden;
@@ -532,7 +535,7 @@ main {
 #index_main > #index_part_5 > div:nth-child(1) > div > span {
   display: inline-block;
   position: relative;
-  color: #afafaf;
+  color: #636363;
   animation: scroll_text_an 5s linear infinite;
 }
 #index_main > #index_part_5 > #part_5_content {
@@ -550,7 +553,6 @@ main {
   left: 0;
   transition: 1s ease;
   border-radius: 2px;
-  box-shadow: 0 0 10px #ff4000;
   padding-left: 0 !important;
 }
 #index_main > #index_part_5 > #part_5_content > #part_5_progress_bar > span {
@@ -566,7 +568,6 @@ main {
   bottom: -1rem;
   background-color: #ff4000;
   z-index: 2;
-  box-shadow: 0 0 10px #ff4000;
   padding-left: 0.5rem;
 }
 #index_main > #index_part_5 > #part_5_content > div {
@@ -624,4 +625,36 @@ main {
   text-align: center;
   width: 100%;
   display: inline-block;
+}
+
+footer {
+  height: 60vh;
+  width: 100%;
+  background-color: #000000;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  -webkit-clip-path: polygon(50% 0%, 100% 38%, 100% 100%, 0 100%, 0% 38%);
+          clip-path: polygon(50% 0%, 100% 38%, 100% 100%, 0 100%, 0% 38%);
+}
+footer > #footer_logo {
+  position: absolute;
+  left: 50%;
+  top: 5%;
+  transform: translateX(-50%);
+  width: 80%;
+  aspect-ratio: 1/1;
+}
+footer > #footer_logo svg {
+  stroke: #ffffff;
+  fill: none;
+  stroke-width: 0.05px;
+}
+footer > #footer_name {
+  color: #ffffff;
+  font-size: 28.8vw;
+  line-height: 70%;
+  font-weight: 700;
 }/*# sourceMappingURL=style.css.map */
