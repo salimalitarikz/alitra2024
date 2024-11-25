@@ -820,7 +820,7 @@ main{
 
 
 footer{
-    height: 60vh;
+    height: 45vh;
     width: 100%;
     background-color: $color_1;
     position: absolute;
@@ -828,20 +828,35 @@ footer{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    clip-path: polygon(50% 0%, 100% 38%, 100% 100%, 0 100%, 0% 38%);
 
     >#footer_logo{
         position: absolute;
         left: 50%;
-        top: 5%;
+        top: -40%;
         transform: translateX(-50%);
-        width: 80%;
+        transform-origin: 0%;
+        rotate: 45deg;
+        background-color: $color_1;
+        width: 85%;
         aspect-ratio: 1/1;
 
         svg{
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            transform-origin: 10%;
+            rotate: 45deg;
             stroke: $color_2;
+            width: 125%;
             fill: none;
-            stroke-width: 0.05px;
+            stroke-width: .1px;
+            stroke-dashoffset: 1000;
+            stroke-dasharray: 1000;
+            animation: footer_logo_an 50s ease infinite;
+            @keyframes footer_logo_an {
+                0%{stroke-dasharray: 1000;}50%{stroke-dasharray: 0;}100%{stroke-dasharray: 1000;}
+            }
+
         }
     }
 
