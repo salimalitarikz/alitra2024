@@ -1057,6 +1057,13 @@ footer{
     top: 0;
     left: 0;
     z-index: 3;
+    transform: translateX(100%);
+
+    &.activated{
+        transition: .5s;
+        transform: translateX(0);
+    }
+    
 
     >#project_start_close_button{
         position: absolute;
@@ -1233,7 +1240,6 @@ footer{
 
 
     }
-
 
     >#project_page_part_4{
 

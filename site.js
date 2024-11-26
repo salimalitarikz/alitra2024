@@ -116,10 +116,14 @@ window.addEventListener("scroll", (el) => {
 
 // PROJECT START PAGE
 
+function StartProject() {
+    qs("#project_start_page").classList.add("activated");
+    setTimeout(() => {
+        qs("#project_page_part_1").classList.add("project_page_part_active");
+    }, 10);
+    
+}
 
-setTimeout(() => {
-    qs("#project_page_part_1").classList.add("project_page_part_active");
-}, 1000);
 
 function projectStartStep(stepNumber) {
    var selected_part = document.getElementById("project_page_part_"+stepNumber);
@@ -173,5 +177,10 @@ function projectStartGoBack(pageNo) {
         qs("#project_page_part_2").classList.add("project_page_part_active");
         qs("#project_page_part_2").classList.add("project_page_part_passive");
         qs("#project_page_part_3").classList.add("project_page_part_active");
+    }else if(pageNo == 0){
+        removeActivePassiveFromAll();
+        setTimeout(() => {
+            qs("#project_start_page").classList.remove("activated");
+        }, 100);
     }
 }

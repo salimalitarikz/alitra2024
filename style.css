@@ -839,6 +839,11 @@ footer > #footer_name {
   top: 0;
   left: 0;
   z-index: 3;
+  transform: translateX(100%);
+}
+#project_start_page.activated {
+  transition: 0.5s;
+  transform: translateX(0);
 }
 #project_start_page > #project_start_close_button {
   position: absolute;
