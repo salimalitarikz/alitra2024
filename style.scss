@@ -1060,8 +1060,8 @@ footer{
 
     >#project_start_close_button{
         position: absolute;
-        bottom: 1rem;
-        left: 1rem;
+        top: 12vh;
+        right: 1rem;
         background-color: $color_1;
         font-size: 1.8rem;
         opacity: 1;
@@ -1179,6 +1179,46 @@ footer{
         }
     }
 
+    .project_page_3_section{
+
+        &#project_page_part_3_website{
+
+            >#project_page_part_3_website_content{
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+
+                >.project_page_3_card{
+                    display: flex;
+                    flex-direction: column;
+                    gap: .3rem;
+                    width: 100%;
+                    background-color: $color_1;
+                    padding: .5rem;
+                    border-radius: 3px;
+                    border: 1px solid $text_g1;
+
+                    *{
+                        color: $color_2;
+                    }
+
+                    >.project_page_3_card_header{
+                        font-size: 1rem;
+                    }
+
+                    >.project_page_3_card_description{
+                        font-size: .8rem;
+                        color: $text_g2;
+                    }
+
+                }
+            }
+
+        }
+
+
+    }
+
 
     >.project_page_part_active{
         transition: .5s;
@@ -1191,6 +1231,8 @@ footer{
                     opacity: 1;
                     transform: translateX(0);
                     &:nth-child(1){transition-delay: .8s !important;}
+                    &:nth-child(2){transition-delay: .9s !important;}
+                    &:nth-child(3){transition-delay: 1s !important;}
                 
                   
                 }
@@ -1207,16 +1249,16 @@ footer{
                     &:nth-child(5){transition-delay: 1.5s !important;}
                     &:nth-child(6){transition-delay: 1.6s !important;}
                     &:nth-child(7){transition-delay: 2s !important;}
-                    &:nth-child(8){transition-delay: 2s !important;}
-                    &:nth-child(9){transition-delay: 2.1s !important;}
-                    &:nth-child(10){transition-delay: 2.2s !important;}
-                    &:nth-child(11){transition-delay: 2.3s !important;}
-                    &:nth-child(12){transition-delay: 2.4s !important;}
-                    &:nth-child(13){transition-delay: 2.5s !important;}
-                    &:nth-child(14){transition-delay: 2.6s !important;}
-                    &:nth-child(15){transition-delay: 2.7s !important;}
-                    &:nth-child(16){transition-delay: 2.8s !important;}
-                    &:nth-child(17){transition-delay: 2.9s !important;}
+                    &:nth-child(8){transition-delay: 2.1s !important;}
+                    &:nth-child(9){transition-delay: 2.2s !important;}
+                    &:nth-child(10){transition-delay: 2.3s !important;}
+                    &:nth-child(11){transition-delay: 2.4s !important;}
+                    &:nth-child(12){transition-delay: 2.5s !important;}
+                    &:nth-child(13){transition-delay: 2.6s !important;}
+                    &:nth-child(14){transition-delay: 2.7s !important;}
+                    &:nth-child(15){transition-delay: 2.8s !important;}
+                    &:nth-child(16){transition-delay: 2.9s !important;}
+                    &:nth-child(17){transition-delay: 3s !important;}
                   
                   
                 }

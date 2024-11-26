@@ -131,3 +131,10 @@ function projectStartStep(stepNumber) {
    
 
 }
+
+function projectPart3Select(type1) {
+    qs("#project_page_part_2").classList.add("project_page_part_passive");
+   if (type1 == "website") {
+    qs("#project_page_part_3_website").classList.add("project_page_part_active");
+   }
+}
