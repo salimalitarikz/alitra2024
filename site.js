@@ -110,3 +110,24 @@ window.addEventListener("scroll", (el) => {
 
 
 });
+
+
+
+
+// PROJECT START PAGE
+
+
+setTimeout(() => {
+    qs("#project_page_part_1").classList.add("project_page_part_active");
+}, 1000);
+
+function projectStartStep(stepNumber) {
+   var selected_part = document.getElementById("project_page_part_"+stepNumber);
+    
+   if (stepNumber == 2) {
+        qs("#project_page_part_1").classList.add("project_page_part_passive");
+        qs("#project_page_part_2").classList.add("project_page_part_active");
+   }
+   
+
+}
