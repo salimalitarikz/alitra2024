@@ -1058,13 +1058,34 @@ footer{
     left: 0;
     z-index: 3;
 
+    >#project_start_close_button{
+        position: absolute;
+        bottom: 1rem;
+        left: 1rem;
+        background-color: $color_1;
+        font-size: 1.8rem;
+        opacity: 1;
+        // width: 3rem;
+        // height: 3rem;
+        border-radius: 4px;
+        padding: .5rem 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        ion-icon {
+            color: $color_2 !important;
+            --ionicon-stroke-width: 40px;
+          }
+    }
+
     >div{
         height: 100vh;
         padding: 1rem;
         padding-top: 20vh;
         display: flex;
         flex-direction: column;
-        gap: 1.5rem;
+        gap: 1.2rem;
         font-size: 1.5rem;
         text-align: left;
         font-weight: 500;
@@ -1092,19 +1113,72 @@ footer{
             opacity: 0;
             // transform: translateX(-2rem);
             transition: .5s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: .5rem;
+
+            ion-icon{
+                font-size: .8rem;
+                color: $color_2;
+            }
         }
 
         >.back_button{
             position: absolute;
             left: 1rem;
             top: 12vh;
-
+            
             opacity: 1;
             background-color: $color_1;
+
+            ion-icon {
+                font-size: 1.8rem !important;
+                --ionicon-stroke-width: 40px;
+              }
 
         }
         
     }
+
+    >#project_page_part_2{
+
+        >#project_page_part_2_content{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            
+            >.project_page_part_2_card{
+                padding: .5rem;
+                width: calc(50% - 1rem);
+                background-color: $color_1;
+                display: flex;
+                flex-direction: column;
+                gap: .2rem;
+                text-align: center;
+                border-radius: 5px;
+                border: 1px solid $text_g1;
+              
+
+                >.project_page_part_2_header{
+                    font-size: 1.1rem;
+                    color: $color_2;
+                    font-weight: 400;
+                }
+
+                >.project_page_part_2_description{
+                    font-size: .85rem;
+                    color: $text_g2;
+                    font-weight: 400;
+                }
+
+                &:nth-last-child(1){
+                    width: 100%;
+                }
+            }
+        }
+    }
+
 
     >.project_page_part_active{
         transition: .5s;
@@ -1178,11 +1252,11 @@ footer{
             transform: translateX(0);
         }
 
-    &#project_page_part_1{
-        >button{
-            transition-delay: 4.3s !important;
+        &#project_page_part_1{
+            >button{
+                transition-delay: 4.3s !important;
+            }
         }
-    }
      
     }
 
