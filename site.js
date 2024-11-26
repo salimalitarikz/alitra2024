@@ -127,44 +127,51 @@ function projectStartStep(stepNumber) {
    if (stepNumber == 2) {
         qs("#project_page_part_1").classList.add("project_page_part_passive");
         qs("#project_page_part_2").classList.add("project_page_part_active");
-   }
+   }else if(stepNumber == 3){
+        qs("#project_page_part_2").classList.add("project_page_part_passive");
+        qs("#project_page_part_3").classList.add("project_page_part_active");
+   }else if(stepNumber == 4){
+        qs("#project_page_part_3").classList.add("project_page_part_passive");
+        qs("#project_page_part_4").classList.add("project_page_part_active");
+    }
+   
    
 
 }
 
-function projectPart3Select(type1) {
-    qs("#project_page_part_2").classList.add("project_page_part_passive");
-   if (type1 == "website") {
-    qs("#project_page_part_3_website").classList.add("project_page_part_active");
-   }
+
+var page3Sections = document.querySelectorAll(".project_page_3_section");
+function removeActivePassiveFromAll() {
+    qs("#project_page_part_1").classList.remove("project_page_part_passive");
+    qs("#project_page_part_2").classList.remove("project_page_part_passive");
+    qs("#project_page_part_3").classList.remove("project_page_part_passive");
+    qs("#project_page_part_4").classList.remove("project_page_part_passive");
+    qs("#project_page_part_1").classList.remove("project_page_part_active");
+    qs("#project_page_part_2").classList.remove("project_page_part_active");
+    qs("#project_page_part_3").classList.remove("project_page_part_active");
+    qs("#project_page_part_4").classList.remove("project_page_part_active");
+
+  
+
 }
+
 
 function projectStartGoBack(pageNo) {
     if (pageNo == 1) {
-        //remove passives
-        qs("#project_page_part_1").classList.remove("project_page_part_passive");
-        qs("#project_page_part_2").classList.remove("project_page_part_passive");
-        qs(".project_page_3_section").classList.remove("project_page_part_passive");
-        // qs("#project_page_part_4").classList.remove("project_page_part_passive");
-        //remove actives
-        qs("#project_page_part_1").classList.remove("project_page_part_active");
-        qs("#project_page_part_2").classList.remove("project_page_part_active");
-        qs(".project_page_3_section").classList.remove("project_page_part_active");
-        // qs("#project_page_part_4").classList.remove("project_page_part_active");
-        //add active
+        
+        removeActivePassiveFromAll();
         qs("#project_page_part_1").classList.add("project_page_part_active");
     }else if(pageNo == 2){
-         //remove passives
-         qs("#project_page_part_1").classList.remove("project_page_part_passive");
-         qs("#project_page_part_2").classList.remove("project_page_part_passive");
-         qs(".project_page_3_section").classList.remove("project_page_part_passive");
-         //remove actives
-         qs("#project_page_part_1").classList.remove("project_page_part_active");
-         qs("#project_page_part_2").classList.remove("project_page_part_active");
-         qs(".project_page_3_section").classList.remove("project_page_part_active");
+        removeActivePassiveFromAll();
          //add active
          qs("#project_page_part_1").classList.add("project_page_part_active");
          qs("#project_page_part_1").classList.add("project_page_part_passive");
          qs("#project_page_part_2").classList.add("project_page_part_active");
+    }else if(pageNo == 3){
+        removeActivePassiveFromAll();
+        //add active
+        qs("#project_page_part_2").classList.add("project_page_part_active");
+        qs("#project_page_part_2").classList.add("project_page_part_passive");
+        qs("#project_page_part_3").classList.add("project_page_part_active");
     }
 }
