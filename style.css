@@ -922,6 +922,7 @@ footer > #footer_name {
   text-align: center;
   border-radius: 5px;
   border: 1px solid #636363;
+  opacity: 0;
 }
 #project_start_page > #project_page_part_2 > #project_page_part_2_content > .project_page_part_2_card > .project_page_part_2_header {
   font-size: 1.1rem;
@@ -935,6 +936,34 @@ footer > #footer_name {
 }
 #project_start_page > #project_page_part_2 > #project_page_part_2_content > .project_page_part_2_card:nth-last-child(1) {
   width: 100%;
+}
+#project_start_page > #project_page_part_2.project_page_part_active .project_page_part_2_card {
+  transition: 0.4s;
+  opacity: 1 !important;
+}
+#project_start_page > #project_page_part_2.project_page_part_active .project_page_part_2_card:nth-child(1) {
+  transition-delay: 2s;
+}
+#project_start_page > #project_page_part_2.project_page_part_active .project_page_part_2_card:nth-child(2) {
+  transition-delay: 2.2s;
+}
+#project_start_page > #project_page_part_2.project_page_part_active .project_page_part_2_card:nth-child(3) {
+  transition-delay: 2.4s;
+}
+#project_start_page > #project_page_part_2.project_page_part_active .project_page_part_2_card:nth-child(4) {
+  transition-delay: 2.6s;
+}
+#project_start_page > #project_page_part_2.project_page_part_active .project_page_part_2_card:nth-child(5) {
+  transition-delay: 2.8s;
+}
+#project_start_page > #project_page_part_2.project_page_part_active .project_page_part_2_card:nth-child(6) {
+  transition-delay: 3s;
+}
+#project_start_page > #project_page_part_2.project_page_part_active .project_page_part_2_card:nth-child(7) {
+  transition-delay: 3.2s;
+}
+#project_start_page > #project_page_part_2.project_page_part_active .project_page_part_2_card:nth-child(8) {
+  transition-delay: 3.4s;
 }
 #project_start_page .project_page_3_section#project_page_part_3_website > #project_page_part_3_website_content {
   display: flex;
@@ -950,6 +979,7 @@ footer > #footer_name {
   padding: 0.5rem;
   border-radius: 3px;
   border: 1px solid #636363;
+  opacity: 0;
 }
 #project_start_page .project_page_3_section#project_page_part_3_website > #project_page_part_3_website_content > .project_page_3_card * {
   color: #ffffff;
@@ -960,6 +990,34 @@ footer > #footer_name {
 #project_start_page .project_page_3_section#project_page_part_3_website > #project_page_part_3_website_content > .project_page_3_card > .project_page_3_card_description {
   font-size: 0.8rem;
   color: #afafaf;
+}
+#project_start_page .project_page_3_section#project_page_part_3_website.project_page_part_active .project_page_3_card {
+  transition: 0.4s;
+  opacity: 1 !important;
+}
+#project_start_page .project_page_3_section#project_page_part_3_website.project_page_part_active .project_page_3_card:nth-child(1) {
+  transition-delay: 2s;
+}
+#project_start_page .project_page_3_section#project_page_part_3_website.project_page_part_active .project_page_3_card:nth-child(2) {
+  transition-delay: 2.2s;
+}
+#project_start_page .project_page_3_section#project_page_part_3_website.project_page_part_active .project_page_3_card:nth-child(3) {
+  transition-delay: 2.4s;
+}
+#project_start_page .project_page_3_section#project_page_part_3_website.project_page_part_active .project_page_3_card:nth-child(4) {
+  transition-delay: 2.6s;
+}
+#project_start_page .project_page_3_section#project_page_part_3_website.project_page_part_active .project_page_3_card:nth-child(5) {
+  transition-delay: 2.8s;
+}
+#project_start_page .project_page_3_section#project_page_part_3_website.project_page_part_active .project_page_3_card:nth-child(6) {
+  transition-delay: 3s;
+}
+#project_start_page .project_page_3_section#project_page_part_3_website.project_page_part_active .project_page_3_card:nth-child(7) {
+  transition-delay: 3.2s;
+}
+#project_start_page .project_page_3_section#project_page_part_3_website.project_page_part_active .project_page_3_card:nth-child(8) {
+  transition-delay: 3.4s;
 }
 #project_start_page > .project_page_part_active {
   transition: 0.5s;
