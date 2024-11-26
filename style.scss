@@ -261,6 +261,25 @@ nav{
                 stroke-width: 1px;
             }
         }
+
+        >#menu_button{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: .4rem;
+            
+            >div{
+                width: 100%;
+                height: 3px;
+                border-radius: 2px;
+                background-color: $color_1;
+                &:nth-child(2){
+                    width: 80%;
+                }
+            }
+        }
+
+    
     }
 
     *{
@@ -280,8 +299,19 @@ nav{
             path, rect{
                 stroke: $color_2 !important; 
                 fill: $color_2 !important; 
-                
             }
+        }
+
+        #menu_button{
+
+            >div{
+                background-color: $color_2 !important;
+                &:nth-child(2){
+                    transition: .2s;
+                    display: none;
+                }
+            }
+            
         }
     }
 }
@@ -290,15 +320,34 @@ menu{
     width: calc(100%);
     height: 0;
     position: fixed;
+    overflow: hidden;
     bottom: 0;
     z-index: 5;
-    transition-delay: 2s !important;
+    transition-delay: 1.2s  !important;
     transition: .1s;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 2rem;
+
+    >*{
+        opacity: 0;
+        transition: .2s;
+       transition-delay: .4s;
+    }
+
+    *{
+        color: $color_2;
+    }
     >#menu_bg{
-       
+       position: absolute;
+       top: 0;
+       left: 0;
         height: 100%;
+        width: 100%;
         display: flex;
-        // z-index: 1;
+        z-index: 1;
+        opacity: 1 !important;
         
         >div{
             
@@ -333,9 +382,107 @@ menu{
         }
     }
 
+    >#menu_content{
+        margin-top: 15vh;
+        width: 100%;
+        flex-grow: 1;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        align-self: flex-end;
+        text-align: end;
+        gap: 2rem;
+
+        >#menu_upper{
+            align-items: flex-end;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+
+            >a{
+                font-weight: 500;
+                font-size: 2rem;
+                text-decoration: none;
+                text-wrap: nowrap;
+                display: flex;
+                align-items: center;
+                gap: .5rem;
+                
+                >span{
+                    text-align: start;
+                    display: inline-block;
+                    font-size: .8rem;
+                    color: $text_g1;
+                }
+
+                ion-icon{
+                    position: absolute;
+                    right: -.5rem;
+                    top: -.7rem;
+                    font-size: .8rem;
+                    color: $text_g1;
+                }
+
+                
+            }
+        }
+
+        >#menu_lower{
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            >p{
+                font-size: .8rem;
+                color: $text_g2;
+            }
+
+            >#social_links{
+                display: flex;
+                gap: 2rem;
+                justify-content: flex-end;
+
+                >a{
+
+                    svg{
+                        width: 2rem;
+                        fill: $color_2;
+                    }
+                }
+            }
+
+            >#menu_footer{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                font-size: .8rem;
+
+                >span{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-end;
+
+                    >span{
+                        display: flex;
+                        align-items: center;
+                        gap: .5rem;
+                    }
+
+                }
+            }
+        }
+
+       
+
+    }
+
     &.opened_menu{
         transition-delay: .1s !important;
         height: 100vh;
+
+        >*{
+            transition-delay: .6s !important;
+            opacity: 1;
+        }
         
         >#menu_bg{
 
@@ -856,7 +1003,7 @@ footer{
             animation: footer_logo_an 13s linear infinite;
             @keyframes footer_logo_an {
                 0%{stroke-dasharray: 33;stroke-dashoffset:0;}
-                50%{stroke-dasharray: 0;stroke-dashoffset:33;}
+                50%{stroke-dasharray: 66;stroke-dashoffset:0;}
                 100%{stroke-dasharray: 33;stroke-dashoffset:0;}
             }
 

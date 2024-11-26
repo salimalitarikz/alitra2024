@@ -201,6 +201,21 @@ nav > #nav_right > button rect {
   stroke: #000000;
   stroke-width: 1px;
 }
+nav > #nav_right > #menu_button {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.4rem;
+}
+nav > #nav_right > #menu_button > div {
+  width: 100%;
+  height: 3px;
+  border-radius: 2px;
+  background-color: #000000;
+}
+nav > #nav_right > #menu_button > div:nth-child(2) {
+  width: 80%;
+}
 nav * {
   transition-delay: 1s;
   transition: 1s;
@@ -213,19 +228,45 @@ nav.nav_on_black * path, nav.nav_on_black * rect {
   stroke: #ffffff !important;
   fill: #ffffff !important;
 }
+nav.nav_on_black #menu_button > div {
+  background-color: #ffffff !important;
+}
+nav.nav_on_black #menu_button > div:nth-child(2) {
+  transition: 0.2s;
+  display: none;
+}
 
 menu {
   width: 100%;
   height: 0;
   position: fixed;
+  overflow: hidden;
   bottom: 0;
   z-index: 5;
-  transition-delay: 2s !important;
+  transition-delay: 1.2s !important;
   transition: 0.1s;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 0 2rem;
+}
+menu > * {
+  opacity: 0;
+  transition: 0.2s;
+  transition-delay: 0.4s;
+}
+menu * {
+  color: #ffffff;
 }
 menu > #menu_bg {
+  position: absolute;
+  top: 0;
+  left: 0;
   height: 100%;
+  width: 100%;
   display: flex;
+  z-index: 1;
+  opacity: 1 !important;
 }
 menu > #menu_bg > div {
   width: 20%;
@@ -264,9 +305,86 @@ menu > #menu_bg > div::before {
   background: #000000;
   filter: url(#noiseFilter);
 }
+menu > #menu_content {
+  margin-top: 15vh;
+  width: 100%;
+  flex-grow: 1;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+  text-align: end;
+  gap: 2rem;
+}
+menu > #menu_content > #menu_upper {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+menu > #menu_content > #menu_upper > a {
+  font-weight: 500;
+  font-size: 2rem;
+  text-decoration: none;
+  text-wrap: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+menu > #menu_content > #menu_upper > a > span {
+  text-align: start;
+  display: inline-block;
+  font-size: 0.8rem;
+  color: #636363;
+}
+menu > #menu_content > #menu_upper > a ion-icon {
+  position: absolute;
+  right: -0.5rem;
+  top: -0.7rem;
+  font-size: 0.8rem;
+  color: #636363;
+}
+menu > #menu_content > #menu_lower {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+menu > #menu_content > #menu_lower > p {
+  font-size: 0.8rem;
+  color: #afafaf;
+}
+menu > #menu_content > #menu_lower > #social_links {
+  display: flex;
+  gap: 2rem;
+  justify-content: flex-end;
+}
+menu > #menu_content > #menu_lower > #social_links > a svg {
+  width: 2rem;
+  fill: #ffffff;
+}
+menu > #menu_content > #menu_lower > #menu_footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.8rem;
+}
+menu > #menu_content > #menu_lower > #menu_footer > span {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+menu > #menu_content > #menu_lower > #menu_footer > span > span {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
 menu.opened_menu {
   transition-delay: 0.1s !important;
   height: 100vh;
+}
+menu.opened_menu > * {
+  transition-delay: 0.6s !important;
+  opacity: 1;
 }
 menu.opened_menu > #menu_bg > div {
   height: 100%;
@@ -669,8 +787,8 @@ footer > #footer_logo svg {
     stroke-dashoffset: 0;
   }
   50% {
-    stroke-dasharray: 0;
-    stroke-dashoffset: 33;
+    stroke-dasharray: 66;
+    stroke-dashoffset: 0;
   }
   100% {
     stroke-dasharray: 33;
