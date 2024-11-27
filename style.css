@@ -824,6 +824,41 @@ footer > #footer_logo svg {
     stroke-dashoffset: 0;
   }
 }
+footer > #footer_content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.5rem;
+  padding-bottom: 3rem;
+}
+footer > #footer_content > #footer_social {
+  display: flex;
+  height: 4rem;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+footer > #footer_content > #footer_social > a {
+  height: 2rem;
+}
+footer > #footer_content > #footer_social > a svg {
+  height: 100%;
+  fill: #ffffff;
+}
+footer > #footer_content > #footer_social > button {
+  background-color: transparent;
+  height: 4rem;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #ffffff;
+  border: 1px solid #c0c0c0;
+}
 footer > #footer_name {
   color: #ffffff;
   font-size: 28.8vw;
