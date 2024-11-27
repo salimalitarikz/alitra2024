@@ -252,6 +252,7 @@ menu {
   flex-direction: column;
   justify-content: flex-end;
   padding: 0 2rem;
+  padding-top: 55vh;
 }
 menu > * {
   opacity: 0;
@@ -309,7 +310,7 @@ menu > #menu_bg > div::before {
   filter: url(#noiseFilter);
 }
 menu > #menu_content {
-  padding-top: 25vh;
+  padding-top: 35vh;
   width: 100%;
   flex-grow: 1;
   z-index: 2;
