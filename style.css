@@ -14,6 +14,7 @@ button {
   background-color: transparent;
   border: none;
   outline: none;
+  cursor: pointer;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -250,7 +251,7 @@ menu {
   transition: 0.1s;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: flex-start;
   padding: 0 2rem;
 }
 menu > * {
@@ -309,18 +310,18 @@ menu > #menu_bg > div::before {
   filter: url(#noiseFilter);
 }
 menu > #menu_content {
-  padding-top: 35vh;
+  padding-top: 26vh;
   width: 100%;
   flex-grow: 1;
   z-index: 2;
   display: flex;
   flex-direction: column;
-  align-self: flex-end;
+  align-self: flex-start;
   text-align: end;
   gap: 2rem;
 }
 menu > #menu_content > #menu_upper {
-  align-items: flex-end;
+  align-items: flex-start;
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -335,7 +336,7 @@ menu > #menu_content > #menu_upper > a {
   gap: 0.5rem;
 }
 menu > #menu_content > #menu_upper > a > span {
-  text-align: end;
+  text-align: start;
   display: inline-block;
   font-size: 0.8rem;
   color: #636363;
@@ -352,6 +353,7 @@ menu > #menu_content > #menu_lower {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  text-align: left;
 }
 menu > #menu_content > #menu_lower > p {
   font-size: 0.8rem;
@@ -360,7 +362,7 @@ menu > #menu_content > #menu_lower > p {
 menu > #menu_content > #menu_lower > #social_links {
   display: flex;
   gap: 2rem;
-  justify-content: flex-end;
+  justify-content: flex-start;
 }
 menu > #menu_content > #menu_lower > #social_links > a svg {
   width: 2rem;
@@ -375,7 +377,7 @@ menu > #menu_content > #menu_lower > #menu_footer {
 menu > #menu_content > #menu_lower > #menu_footer > span {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: flex-start;
 }
 menu > #menu_content > #menu_lower > #menu_footer > span > span {
   display: flex;
@@ -422,8 +424,6 @@ main {
   line-height: 110%;
 }
 #index_main > #index_part_1 > h1 > span:nth-child(1) {
-  background-color: #000000;
-  margin-bottom: 0.7rem;
   padding: 0 1rem;
   border-radius: 2px;
   position: relative;
@@ -431,8 +431,8 @@ main {
 #index_main > #index_part_1 > h1 > span:nth-child(1)::before {
   content: "TM";
   position: absolute;
-  top: -2.5rem;
-  right: 0.3rem;
+  bottom: 0rem;
+  right: -1rem;
   font-size: 0.8rem;
   font-weight: 900;
   color: #000000;
@@ -444,7 +444,6 @@ main {
   z-index: 1;
 }
 #index_main > #index_part_1 > h1 > span:nth-child(1) > span {
-  color: #ffffff;
   z-index: 3;
 }
 #index_main > #index_part_1 > h1 > span:nth-child(1) > span::after {
@@ -493,6 +492,17 @@ main {
 }
 #index_main > #index_part_1 > button > span:nth-last-child(1) > ion-icon {
   color: #ff4000;
+}
+@media only screen and (min-width: 800px) {
+  #index_main > #index_part_1 > button span:nth-last-child(1) {
+    transition: 0.4s;
+    filter: blur(20px);
+    opacity: 0;
+  }
+  #index_main > #index_part_1 > button:hover span:nth-last-child(1) {
+    opacity: 1;
+    filter: blur(0px);
+  }
 }
 @media only screen and (min-width: 800px) {
   #index_main > #index_part_1 > h1 {
@@ -806,9 +816,6 @@ footer > #footer_logo svg {
   width: 125%;
   fill: none;
   stroke-width: 0.02px;
-  stroke-dashoffset: 1000;
-  stroke-dasharray: 1000;
-  animation: footer_logo_an 13s linear infinite;
 }
 @keyframes footer_logo_an {
   0% {
@@ -881,6 +888,7 @@ footer > #footer_name {
   transform: translateX(0);
 }
 #project_start_page > #project_start_close_button {
+  cursor: pointer;
   transform: translateY(0) !important;
   height: unset;
   left: unset;
@@ -941,6 +949,7 @@ footer > #footer_name {
   color: #ffffff;
 }
 #project_start_page > div > .back_button {
+  cursor: pointer;
   position: absolute;
   left: 1rem;
   top: 12vh;
@@ -954,6 +963,7 @@ footer > #footer_name {
 #project_start_page > #project_page_part_1 > div {
   padding: 1rem 2rem;
   border-radius: 20px;
+  cursor: pointer;
 }
 #project_start_page > #project_page_part_2 > #project_page_part_2_content {
   display: flex;
@@ -964,6 +974,7 @@ footer > #footer_name {
   padding-top: 1rem;
 }
 #project_start_page > #project_page_part_2 > #project_page_part_2_content > .project_page_part_2_card {
+  cursor: pointer;
   padding: 2rem 0.5rem;
   width: calc(50% - 0.5rem);
   background-color: #000000;
@@ -976,6 +987,9 @@ footer > #footer_name {
   border-radius: 22px;
   border: 1px solid #636363;
   opacity: 0;
+}
+#project_start_page > #project_page_part_2 > #project_page_part_2_content > .project_page_part_2_card:hover > .project_page_part_2_header {
+  color: #ff4000;
 }
 #project_start_page > #project_page_part_2 > #project_page_part_2_content > .project_page_part_2_card > .project_page_part_2_header {
   font-size: 1.1rem;
@@ -1046,6 +1060,7 @@ footer > #footer_name {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  cursor: pointer;
 }
 #project_start_page > #project_page_part_3 > #project_page_part_3_content > div:nth-last-child(1) > span, #project_start_page > #project_page_part_3 > #project_page_part_3_content > div:nth-last-child(1) > ion-icon {
   color: #ffffff;
@@ -1114,6 +1129,9 @@ footer > #footer_name {
 }
 #project_start_page > #project_page_part_4 > #project_page_part_4_content #project_start_finish_button {
   background-color: #ff4000 !important;
+}
+#project_start_page > #project_page_part_4 > #project_page_part_4_content #project_start_finish_button:hover > span, #project_start_page > #project_page_part_4 > #project_page_part_4_content #project_start_finish_button:hover > ion-icon {
+  color: #000000;
 }
 #project_start_page > #project_page_part_4 > #project_page_part_4_content > * {
   opacity: 0;
@@ -1265,4 +1283,20 @@ footer > #footer_name {
 #project_start_page > .project_page_part_passive {
   transition: 0.5s;
   transform: translateX(-100%);
+}
+@media only screen and (min-width: 800px) {
+  #project_start_page {
+    width: 50vw;
+    transform: translateX(200%);
+    overflow: hidden;
+  }
+  #project_start_page.activated {
+    transition: 0.5s;
+    transform: translateX(99%);
+  }
+}
+
+body:has(#project_start_page.activated) main {
+  transition: 1s;
+  filter: blur(30px);
 }/*# sourceMappingURL=style.css.map */
