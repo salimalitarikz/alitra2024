@@ -350,7 +350,23 @@
     </main>
 
 
-    <section id="project_start_page" class="">
+    <form action="https://api.staticforms.xyz/submit" method="post" id="project_start_page" class="">
+    
+        <!-- Replace with accesKey sent to your email -->
+        <input type="hidden" name="accessKey" value="ed4d0f4a-92d3-44d2-b5b1-d58d816a830f"> <!-- Required -->
+     
+        <input type="hidden" name="subject"> <!-- Optional -->
+     
+      
+        <!-- If you want replyTo to be set to specific email -->
+        <input type="text" name="replyTo" value="hello@alitra.net"> <!-- Optional -->
+        <!-- Specify @ as reply to value if you want it to be customers email -->
+        <input type="hidden" name="replyTo" value="@"> <!-- Optional -->
+        <!-- If you want form to redirect to a specific url after submission -->
+        <!-- <input type="hidden" name="redirectTo" value="https://example.com/contact/success"> Optional -->
+        <input type="submit" value="Submit" />
+  
+    
       <div id="project_page_part_1" class="">
        
         <span class="text_part" data-tr="<span>Merhaba</span>" data-en="Welcome"> </span>
@@ -412,7 +428,7 @@
       
         "></span>
 
-        <button onclick="projectStartStep(2)" data-tr="Hazırım <ion-icon name='flash'></ion-icon>" data-en="Ready <ion-icon name='flash'></ion-icon>" ></button>
+        <div onclick="projectStartStep(2)" data-tr="Hazırım <ion-icon name='flash'></ion-icon>" data-en="Ready <ion-icon name='flash'></ion-icon>" ></div>
 
         <!-- <button class="back_button" onclick="projectStartGoBack(0)"><ion-icon name="return-down-back"></ion-icon></button> -->
       </div>
@@ -504,7 +520,7 @@
 
         </div>
 
-        <button class="back_button" onclick="projectStartGoBack(1)"><ion-icon name="return-down-back"></ion-icon></button>
+        <div class="back_button" onclick="projectStartGoBack(1)"><ion-icon name="return-down-back"></ion-icon></div>
       </div>
 
    
@@ -536,14 +552,13 @@
         </span>
 
         <div id="project_page_part_3_content">
-
-          <textarea rows="15" placeholder="Buraya detayları yazabilirsiniz ..."></textarea>
+          <textarea name="message" rows="15" placeholder="Buraya detayları yazabilirsiniz ..."></textarea>
          <div  onclick="projectStartStep(4)"><span>Devam Edelim</span><ion-icon name="arrow-forward-circle"></ion-icon></div>
 
 
         </div>
 
-        <button class="back_button" onclick="projectStartGoBack(2)"><ion-icon name="return-down-back"></ion-icon></button>
+        <div class="back_button" onclick="projectStartGoBack(2)"><ion-icon name="return-down-back"></ion-icon></div>
       </div>
 
       <div id="project_page_part_4">
@@ -586,36 +601,35 @@
 
         <div id="project_page_part_4_content">
 
-          
           <div>
             <label for="">İsminiz</label>
-            <input type="text" >
+            <input type="text" name="name">
           </div>
           <div>
             <label for="">Telefon Numaranız</label>
-            <input type="number">
+            <input type="text" name="phone">
           </div>
           <div>
             <label for="">Mail Adresiniz</label>
-            <input type="email" data-label="Mail Adresiniz">
+            <input type="text" name="email">
           </div>
           
           
         
-         <button id="project_start_finish_button"><span>Markanızı Geliştirin</span><ion-icon name="crop"></ion-icon></button>
+         <button type="submit" id="project_start_finish_button"><span>Markanızı Geliştirin</span><ion-icon name="crop"></ion-icon></button>
 
 
         </div>
 
-        <button  class="back_button" onclick="projectStartGoBack(3)"><ion-icon name="return-down-back"></ion-icon></button>
+        <div  class="back_button" onclick="projectStartGoBack(3)"><ion-icon name="return-down-back"></ion-icon></div>
       </div>
 
     
-      <button id="project_start_close_button" onclick="projectStartGoBack(0)">
+      <div id="project_start_close_button" onclick="projectStartGoBack(0)">
         <ion-icon name="close-outline"></ion-icon>
-      </button>
+      </div>
 
-    </section>
+    </form>
 
 
     <footer>
@@ -658,6 +672,10 @@
       </div>
 
     </footer>
+
+
+    
+
 
  
 
