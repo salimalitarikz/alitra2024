@@ -8,6 +8,7 @@ $color_2:#ffffff;
 $text_g1:#636363;
 $text_g2:#afafaf;
 $text_g3:#c0c0c0;
+$text_g4:#303030;
 
 // $color_1:#ffffff;
 // $color_2:#000000;
@@ -47,20 +48,8 @@ h1,h2,h3,h4,h5,h6{
 
 
 .noised{
-    overflow: hidden;
-    &::after {
-        position: absolute;
-        left: 0;
-        top: 0;
-        content: '';
-        width: 100%;
-        height: 100%;
-        z-index: -1;
-      
-        opacity: 15%;
-        background: #000000;
-        filter: url(#noiseFilter);
-      }
+    
+    background-image: url(/ui/bg_grain.png);
 }
 
 html{
@@ -368,20 +357,8 @@ menu{
             &:nth-child(1){transition-delay: .5s;}
 
             overflow: hidden;
-            &::before {
-                position: absolute;
-                left: 0;
-                top: 0;
-                content: '';
-                width: 100%;
-                height: 100%;
-                // z-index: -1;
-              
-                opacity: 20%;
-                
-                background: #000000;
-                filter: url(#noiseFilter) ;
-              }
+            @extend .noised;
+       
         }
     }
 
@@ -886,6 +863,55 @@ main{
 
         }
 
+        @media only screen and (min-width: $media_1) {
+
+            >#index_part_3_header{
+                >h1{
+                    font-size: 8rem;
+                    
+                }
+            }
+
+            >#index_part_3_content{
+                flex-direction: row;
+                flex-wrap: wrap;
+                padding: 2.5rem;
+                row-gap: 3rem;
+                justify-content: space-between;
+                width: 100%;
+                
+
+                >.index_part_3_box{
+                    height: 8rem;
+                    width: 30%;
+                    border-bottom: none;
+                    background-color: $color_1;
+                    padding: 1rem;
+                    border-radius: 2rem;
+                    cursor: pointer;
+                   
+                    
+                    *{
+                        color: $color_2;
+                    }
+
+                    >.index_part_3_box_header{
+
+                        >span:nth-child(1){
+                            color: $text_g4;
+                        }
+                    }
+                }
+
+            }
+
+
+        }
+
+        >#index_part_3_content{
+
+        }
+
     }
 
     >#index_part_5{
@@ -1035,6 +1061,15 @@ main{
         width: 100%;
         display: inline-block;
     }
+
+    @media only screen and (min-width: $media_1) {
+
+     >span{
+        font-size: 2rem;
+        font-weight: 500;
+     }
+
+    }
 }
 
 
@@ -1049,6 +1084,7 @@ footer{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    @extend .noised;
 
     >#footer_logo{
         position: absolute;
@@ -1189,7 +1225,8 @@ footer{
         position: absolute;
         top: 0;
         left: 0;
-        transform: translateX(300%);    
+        transform: translateX(300%);  
+        @extend .noised;  
         
         
         >*{
