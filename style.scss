@@ -739,6 +739,8 @@ main{
                         
                     }
                 }
+
+                
             }
         }
 
@@ -749,14 +751,41 @@ main{
             padding: 1rem;
             background-color: $color_1;
             text-decoration: none;
-            border-radius: 4px;
+            border-radius: 24px;
             display: flex;
             gap: .4rem;
             border: 1px solid $text_g1;
 
+            &:hover{
+                transition: .3s;
+                box-shadow: 0 0 30px $text_g2;
+            }
+
             >ion-icon{
                 color: $color_2;
             }
+        }
+
+        @media only screen and (min-width: $media_1) {
+
+            padding: 1rem 2rem;
+
+            >#index_part_2_content_wrapper{
+
+                >#index_part_2_content{
+                    flex-direction: row;
+                    
+                }
+            }
+
+            >a{
+                position: relative;
+                left: 50%;
+                transform: translateX(-50%);
+                margin-top: 2rem;
+                padding: 1.5rem 2rem;
+            }
+            
         }
         
 

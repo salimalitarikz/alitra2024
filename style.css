@@ -585,13 +585,32 @@ main {
   padding: 1rem;
   background-color: #000000;
   text-decoration: none;
-  border-radius: 4px;
+  border-radius: 24px;
   display: flex;
   gap: 0.4rem;
   border: 1px solid #636363;
 }
+#index_main > #index_part_2 > a:hover {
+  transition: 0.3s;
+  box-shadow: 0 0 30px #afafaf;
+}
 #index_main > #index_part_2 > a > ion-icon {
   color: #ffffff;
+}
+@media only screen and (min-width: 800px) {
+  #index_main > #index_part_2 {
+    padding: 1rem 2rem;
+  }
+  #index_main > #index_part_2 > #index_part_2_content_wrapper > #index_part_2_content {
+    flex-direction: row;
+  }
+  #index_main > #index_part_2 > a {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 2rem;
+    padding: 1.5rem 2rem;
+  }
 }
 #index_main > #index_part_3 {
   margin-top: 3vh;
