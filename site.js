@@ -61,7 +61,7 @@ window.addEventListener("scroll", (el) => {
 
 
 
-    if(scrollVal > 2550){
+    if(scrollVal > 3150){
         qs("#part_5_progress_bar").style.height = "97.5vh";
         qs("#part_5_c_6").classList.add("active");
         qs("#part_5_c_5").classList.add("active");
@@ -69,7 +69,7 @@ window.addEventListener("scroll", (el) => {
         qs("#part_5_c_3").classList.add("active");
         qs("#part_5_c_2").classList.add("active");
         qs("#part_5_c_1").classList.add("active");
-    }else if (scrollVal > 2450) {
+    }else if (scrollVal > 3050) {
         qs("#part_5_progress_bar").style.height = "82.5vh";
         qs("#part_5_c_6").classList.remove("active");
         qs("#part_5_c_5").classList.add("active");
@@ -77,25 +77,25 @@ window.addEventListener("scroll", (el) => {
         qs("#part_5_c_3").classList.add("active");
         qs("#part_5_c_2").classList.add("active");
         qs("#part_5_c_1").classList.add("active");
-    }else if (scrollVal > 2350) {
+    }else if (scrollVal > 2950) {
         qs("#part_5_progress_bar").style.height = "67.5vh";
         qs("#part_5_c_5").classList.remove("active");
         qs("#part_5_c_4").classList.add("active");
         qs("#part_5_c_3").classList.add("active");
         qs("#part_5_c_2").classList.add("active");
         qs("#part_5_c_1").classList.add("active");
-    }else if(scrollVal > 2250){
+    }else if(scrollVal > 2850){
         qs("#part_5_progress_bar").style.height = "52.5vh";
         qs("#part_5_c_4").classList.remove("active");
         qs("#part_5_c_3").classList.add("active");
         qs("#part_5_c_2").classList.add("active");
         qs("#part_5_c_1").classList.add("active");
-    }else if(scrollVal > 2150){
+    }else if(scrollVal > 2750){
         qs("#part_5_progress_bar").style.height = "37.5vh";
         qs("#part_5_c_3").classList.remove("active");
         qs("#part_5_c_2").classList.add("active");
         qs("#part_5_c_1").classList.add("active");
-    }else if(scrollVal > 2050){
+    }else if(scrollVal > 2650){
         qs("#part_5_progress_bar").style.height = "22.5vh";
         qs("#part_5_c_2").classList.remove("active");
         qs("#part_5_c_1").classList.add("active");
@@ -111,9 +111,18 @@ window.addEventListener("scroll", (el) => {
 
 });
 
+//////////////TEEESSSTTTTT
 
 
 
+
+
+
+
+
+
+
+/////////////////////TEEEESSSTTT
 // PROJECT START PAGE
 
 function StartProject() {

@@ -689,7 +689,7 @@ main {
     color: #ffffff;
   }
   #index_main > #index_part_3 > #index_part_3_content > .index_part_3_box > .index_part_3_box_header > span:nth-child(1) {
-    color: #303030;
+    color: #222222;
   }
 }
 #index_main > #index_part_5 {
@@ -810,7 +810,7 @@ main {
 }
 @media only screen and (min-width: 800px) {
   #index_dec_1 > span {
-    font-size: 2rem;
+    font-size: 1.7rem;
     font-weight: 500;
   }
 }
