@@ -34,6 +34,7 @@ html {
 body {
   width: 100%;
   background-color: #ffffff;
+  overflow: hidden;
   padding-top: 5rem;
   padding-bottom: 70vh;
 }
