@@ -407,7 +407,7 @@ main {
   position: relative;
 }
 #index_main > #index_part_1 > h1 > span:nth-child(1)::before {
-  content: "TM";
+  content: "";
   position: absolute;
   bottom: 0rem;
   right: -1rem;
